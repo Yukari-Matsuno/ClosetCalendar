@@ -1,0 +1,430 @@
+#index {
+  background-image: url("/images/closet.jpg");
+  background-position: right top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.index__text {
+  margin: 150px 0 0 100px;
+  color: #FF6666;
+}
+
+.logo {
+  font-size: 100px;
+}
+
+.index__text p {
+  font-size: 30px;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #FF9999;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 5px #FF9999;
+  border: dashed 1px white;
+  transition: .4s;
+  color: #fff;
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+
+
+}
+
+.headernav{
+  background-color: #FF6666;
+}
+
+.headernav ul {
+  margin: 0;
+}
+
+.headernav li {
+  float: right;
+  list-style:  none;
+  text-align: center;
+  padding: 1% 2%;
+  font-size: 1.4vw;
+  border: white 2px solid;
+  border-radius: 5px;
+  margin:12px 4vw 12px 0;
+  width: auto;
+  height: auto;
+
+}
+
+.headernav li a {
+  text-decoration: none;
+  color: white;
+
+}
+
+.calender__container {
+  width: 75%;
+  margin: 50px auto;
+}
+
+#how-to {
+  background-color: white;
+  color: #FF6666;
+}
+
+.how-to__contents {
+  background-color: white;
+  margin: 5% 10%;
+  padding: 5%;
+  border: 15px solid #FF6666;
+}
+
+.how-to__contents h1 {
+  padding-bottom: 20px;
+  font-size: 50px;
+}
+
+.how-to__probrem--image {
+  float: left;
+  width: 30%;
+  height: auto;
+  margin-top: 2em;
+}
+
+.how-to__probrem--text {
+  float: left;
+  width: 40%;
+  position: relative;
+  margin: 0em 0 2em 8%;
+  padding: 15px 15px 15px 30px;
+  background-color: #f0f8ff;
+  border-radius: 30px;
+  color: #778899;
+  font-size: 20px;
+}
+
+.how-to__probrem--text:before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  width: 13px;
+  height: 12px;
+  bottom: 0;
+  background: #f0f8ff;
+  border-radius: 50%;
+}
+
+.how-to__probrem--text:after {
+  content: "";
+  position: absolute;
+  left: -24px;
+  width: 20px;
+  height: 18px;
+  bottom: 3px;
+  background: #f0f8ff;
+  border-radius: 50%;
+}
+
+.how-to__probrem--text li {
+  padding-bottom: 10px;
+}
+
+.num {
+  font-size: 30px;
+  background-color: #FF6666;
+  color: white;
+  padding: 14px 0;
+  text-align: center;
+}
+
+.num1 {
+  padding-right: 70%;
+}
+
+.num2 {
+  padding-left: 70%;
+}
+
+.how-to__main--describe--article {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.how-to__main--describe--article--1 {
+  padding-left: 10%
+}
+
+.how-to__main--describe--article--2 {
+  padding-right: 10%;
+}
+
+.how-to__main--describe--article img {
+  float: left;
+  width: 40%;
+  height: ;
+  border-radius: 50%
+}
+
+.how-to__main--describe--article p {
+  width: 58%;
+  float: left;
+  padding: 50px 0 0 2%;
+  font-size: 18px
+}
+
+.how-to__main--describe--article--2 img{
+    float: right;
+}
+.how-to__main--describe--article--2 p{
+    float: right;
+    padding: 50px 2% 0 0;
+    text-align: right;
+}
+
+.how-to__contents--message {
+  margin-top: 100px;
+}
+
+.how-to__contents--message--text {
+  width: 60%;
+  font-size: 30px;
+  float: left;
+}
+
+.how-to__contents--message--button {
+  float: right;
+  margin:50px 0 0 auto;
+}
+
+
+
+
+/* #calender {
+  background-color: #F1E893;
+  border: #F16780 10px double;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#calender th {
+  border: #F16780 2px solid;
+} */
+
+#create, #edit {
+  background-image: url("/images/torso.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+form{
+  border: #FF6666 5px solid;
+  border-radius: 5px;
+  width: 50%;
+  margin: 50px 0 0 20%;
+  padding: 10px 0 10px 30px;
+}
+
+form p {
+  font-size: 1.2em;
+}
+
+form dl dt {
+  padding-bottom: 20px;
+  float:left;
+  clear: both;
+}
+
+form dl dd {
+  padding: 0 0 20px 80px;
+}
+
+.event, .photo {
+  font-size: 1.2em;
+  float: none;
+}
+
+.photo {
+  padding: 0;
+}
+
+.photoupload {
+  border: none;
+}
+
+input {
+  width: 60%;
+  border: #FF6666 solid 1px;
+}
+
+.square-button {
+  border-radius: 5px;
+  height: 30px;
+  width: auto;
+  line-height: normal;
+
+}
+
+#detail {
+  width:60%;
+  margin:5% auto;
+  border: 3px solid #FF6666;	/* 線の太さ・種類・色 */
+  border-radius: 5px;
+  padding: 35px 10px 10px 10px;	/* 内側の余白 上・右・左・下 */
+  position: relative;
+}
+
+#detail:before {
+  content: '';
+  color: white;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#detail:after {
+  background: repeating-linear-gradient(-45deg, #FF6666, #FF6666 5px, #ffc6c6 0, #ffc6c6 10px); /* ストライプの色 */
+  border-bottom: 1px solid #ff6666; /* タイトル部分下線 */
+  content: '';
+  height: 30px; /* タイトル部分高さ */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+}
+
+
+
+.coordinate__title {
+  color: #FF6666;
+  padding: 8px;
+
+  border-bottom:2px solid #FF6666;
+}
+
+.coordinate__item, .coordinate__ivent {
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  margin:30px;
+}
+
+.coordinate__item--title, .coordinate__ivent--title {
+  font-size: 1.5em;
+  color: #ff6666;
+  padding-bottom: 10px
+}
+
+.coordinate__item li {
+  padding-bottom: 0.8em;
+}
+
+.coordinate__ivent--text {
+  padding: 0 0 30px 30px;
+  font-size: 1.2em;
+}
+
+.detail__button {
+  text-align: right;
+  padding:20px;
+}
+
+
+
+@media screen and (max-width:767px) {
+
+  #index {
+    background-image: url("/images/closet.jpg");
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+
+  .index__text {
+    margin: 200px 0 0 10%;
+    color: white;
+  }
+
+  .logo {
+    font-size: 12vw;
+  }
+
+  .index__text p {
+    font-size: 6vw;
+    margin: 0;
+  }
+
+  .index__button {
+    margin: 5% 10% 10% 70%;
+  }
+
+  .calender__container {
+    width: 98%;
+    margin: 0 auto;
+  }
+
+
+
+
+  #create, #edit {
+    background-image: none;
+  }
+
+  .container {
+    padding-top: 50px;
+    background-image: url("/images/lace.jpg");
+  }
+
+   form {
+    width: 80%;
+    margin:0 auto;
+  }
+
+  .photoupload, .form-check-input{
+    font-size: 8px;
+  }
+
+  /* form dt {
+    float: none;
+    margin: 0;
+  }
+
+  form dd {
+    padding: 0;
+    margin: 0;
+  }
+
+  form dl dt { */
+    /* padding-bottom: 20px; */
+    /* clear: both;
+  } */
+
+
+
+  input {
+     width: 76%;
+  }
+
+  .headernav li{
+    border: white 1px solid;
+  }
+
+
+}
