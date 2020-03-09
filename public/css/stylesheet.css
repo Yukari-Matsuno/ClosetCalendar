@@ -397,24 +397,24 @@ input {
     margin:0 auto;
   }
 
+  .items, .event, .photo{
+    color: #ff6666;
+  }
+
   .photoupload, .form-check-input{
     font-size: 8px;
   }
 
-  /* form dt {
-    float: none;
-    margin: 0;
+  form dl dt {
+    padding-bottom: 5px;
+    float:none;
+
   }
 
-  form dd {
-    padding: 0;
-    margin: 0;
+  form dl dd {
+    padding: 0 0 20px 0px;
+    margin-left: 20px
   }
-
-  form dl dt { */
-    /* padding-bottom: 20px; */
-    /* clear: both;
-  } */
 
 
 

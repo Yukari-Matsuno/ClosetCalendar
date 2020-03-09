@@ -19,7 +19,7 @@ Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('calender', 'CalenderController@show');
+    Route::get('calender', 'CalenderController@show')->middleware('auth');
     Route::get('coordinate/create', 'Admin\CoordinateController@show')->middleware('auth');
     Route::post('coordinate/create', 'Admin\CoordinateController@create')->middleware('auth');
     Route ::get('coordinate/detail', 'Admin\CoordinateController@showDetail')->middleware('auth');

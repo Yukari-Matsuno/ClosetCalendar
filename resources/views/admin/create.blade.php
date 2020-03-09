@@ -7,7 +7,7 @@
 
 <div class="form">
   <form action="{{ action('Admin\CoordinateController@create') }}" method="post" enctype="multipart/form-data">
-    <p>何を着た？(着る？)</p>
+    <p class="items">何を着た？(着る？)</p>
     <dl>
       <dt>Tops</dt>
       <dd><input type="text" name="tops"></dd>
@@ -25,7 +25,7 @@
       <dd><input type="file" name="photo" class="photoupload"></dd>
     </dl>
     <button type="submit" class="button square-button">記録する</button>
-    <input type="hidden" name="day" value="{{ $coordinate_items->id }}">
+
     {{ csrf_field() }}
   </form>
 </div>

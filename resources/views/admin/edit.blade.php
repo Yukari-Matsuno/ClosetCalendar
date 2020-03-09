@@ -7,7 +7,7 @@
 
 <div class="form">
   <form action="{{ action('Admin\CoordinateController@edit') }}" method="post" enctype="multipart/form-data">
-    <p>何を着た？(着る？)</p>
+    <p class="items">何を着た？(着る？)</p>
     <dl>
       <dt>Tops</dt>
       <dd><input type="text" name="tops" value="{{ $coordinate_items->tops }}"></dd>
