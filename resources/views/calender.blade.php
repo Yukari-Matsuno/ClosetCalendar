@@ -15,9 +15,9 @@ var date_start = new Date(date_now.getFullYear(), date_now.getMonth(), 1);
 var date_end = new Date(date_now.getFullYear(), date_now.getMonth(), 1);
 var days = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"];
 date_end.setMonth(date_end.getMonth()+12);
+date_start.setMonth(date_start.getMonth()-12);
 
 document.addEventListener("DOMContentLoaded", function() {
-
   //FullCalendarを生成します
   var calendar = new FullCalendar.Calendar(document.getElementById("calendar"), {
 
@@ -72,7 +72,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 @section('content')
 <main id=closet-caleder>
-<div class="calender__container">
+<h1 class="calender__message-for-guest">Welcome<br>Make Your Closet Clalendar !</h1>
+<div class="calender__container calender__container--for-guest">
+  <div class="calender__image-for-guest">
+    <img src="images/select.jpg" alt="服を選ぶ女性" >
+  </div>
   <div id ="calendar"></div>
 </div>
 </main>

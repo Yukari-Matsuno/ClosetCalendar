@@ -4,9 +4,9 @@
 
 @section('content')
 <main id="create">
-
 <div class="form">
   <form action="{{ action('Admin\CoordinateController@create') }}" method="post" enctype="multipart/form-data">
+    <p>{{ substr($date, 0, 4) . "/" . substr($date, 5, 2) . "/" . substr($date, 8, 2) }}のコーディネート</p>
     <p class="items">何を着た？(着る？)</p>
     <dl>
       <dt>Tops</dt>
@@ -25,7 +25,7 @@
       <dd><input type="file" name="photo" class="photoupload"></dd>
     </dl>
     <button type="submit" class="button square-button">記録する</button>
-
+    <input type="hidden" name="date" value="{{ $date }}">
     {{ csrf_field() }}
   </form>
 </div>

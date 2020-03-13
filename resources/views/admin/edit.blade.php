@@ -33,6 +33,7 @@
         </div>
     </dl>
     <input type="hidden" name="id" value="{{ $coordinate_items->id }}">
+    <input type="hidden" name="date" value="{{ $coordinate_items->date }}">
     <button type="submit" class="button square-button">更新する</button>
     {{ csrf_field() }}
   </form>

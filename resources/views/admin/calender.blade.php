@@ -17,9 +17,13 @@ var date_start = new Date(date_now.getFullYear(), date_now.getMonth(), 1);
 var date_end = new Date(date_now.getFullYear(), date_now.getMonth(), 1);
 var days = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"];
 date_end.setMonth(date_end.getMonth()+12);
+date_start.setMonth(date_start.getMonth()-12);
 
 
 document.addEventListener("DOMContentLoaded", function() {
+  var coordinateDateHash = @json($coordinateDateHash);
+  var _events = @json($events);
+  console.log(_events);
 
   //FullCalendarを生成します
   var calendar = new FullCalendar.Calendar(document.getElementById("calendar"), {
@@ -48,12 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
       end: date_end
     },
 
-    //イベント情報をJSONファイルから読み込みます
-    events: [
-      {
 
-      }
-    ],
 
     //タイトルを書き換えます（2019年8月）
     titleFormat: function(obj) {
@@ -66,26 +65,32 @@ document.addEventListener("DOMContentLoaded", function() {
     },
 
     dateClick: function(info) {
-
       console.log("info", info);
-      // alert('Clicked on: ' + info.dateStr);
-      // alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
-      // alert('Current view: ' + info.view.type);
-      // change the day's background color just for fun
-      info.dayEl.style.backgroundColor = '#ff6666';
-      // var str = moment( date ).format( 'YYYYMMDD' );
-      var redirectUrl = "/admin/coordinate/create?date=" + info.dateStr ;
-      location.href = redirectUrl;
 
+      info.dayEl.style.backgroundColor = '#ff6666';
+      // var str = moment( .date ).format( 'YYYYMMDD' );
+
+      var redirectUrl = `/admin/coordinate/create?date=${info.dateStr}`;
+      var coordinateId = coordinateDateHash[info.dateStr]['id'];
+      if (!!coordinateId) {
+        // IDあった時
+        redirectUrl = `/admin/coordinate/detail?id=${coordinateId}`;
+      }
+      location.href = redirectUrl;
     },
 
 
+     events: _events,
 
     //イベントのクリック時の処理を加えます
-    eventClick: function(obj) {
-      alert(obj.event.title);
+    eventClick: function(info) {
+      info.el.style.borderColor = '#ff6666';
+      var coordinateDateHash = @json($coordinateDateHash);
+      var coordinateId = coordinateDateHash[info.dateStr];
+      location.href = `/admin/coordinate/detail?id=${coordinateId}`;
+
     }
-  });
+   });
 
   calendar.render();
 

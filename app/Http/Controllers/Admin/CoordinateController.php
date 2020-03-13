@@ -9,9 +9,10 @@ use App\Coordinate;
 
 class CoordinateController extends Controller
 {
-    public function show()
+    public function add(Request $request)
     {
-      return view('admin.create');
+      $coordinate = new Coordinate;
+      return view('admin.create', ['date' => $request->date]);
     }
 
     public function create(Request $request)
@@ -35,6 +36,7 @@ class CoordinateController extends Controller
       $form["outer"] == null ? "" : $coordinate->outer = $form["outer"];
       $form["shoes"] == null ? "" : $coordinate->shoes = $form["shoes"];
       $form["events"] == null ? "" : $coordinate->events = $form["events"];
+      $coordinate->date = $form["date"];
 
       // データベースに保存する
       $coordinate->save();
@@ -42,11 +44,6 @@ class CoordinateController extends Controller
       return redirect('admin/calender');
     }
 
-    public function showDetail(Request $request) {
-      $coordinate = Coordinate::find($request->id);
-      $items = [$coordinate->tops, $coordinate->bottoms, $coordinate->outer, $coordinate->shoes, $coordinate->other];
-      return view('admin.detail', ['coordinate_items' => $coordinate, 'use_items' => $items]);
-    }
 
     public function edit(Request $request) {
       $coordinate = Coordinate::find($request->id);
@@ -58,8 +55,6 @@ class CoordinateController extends Controller
 
     public function update(Request $request)
     {
-
-
       $coordinate = Coordinate::find($request->id);
       // 送信されてきたフォームデータを格納する
       $form = $request->all();
@@ -80,10 +75,12 @@ class CoordinateController extends Controller
       $form["outer"] == null ? "" : $coordinate->outer = $form["outer"];
       $form["shoes"] == null ? "" : $coordinate->shoes = $form["shoes"];
       $form["events"] == null ? "" : $coordinate->events = $form["events"];
+      $coordinate->date = $form["date"];
       $coordinate->save();
 
       return redirect('admin/calender');
       }
+
 
       public function destroy(Request $request)
       {

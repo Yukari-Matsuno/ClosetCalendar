@@ -1,3 +1,5 @@
+
+/* インデックス */
 #index {
   background-image: url("/images/closet.jpg");
   background-position: right top;
@@ -47,6 +49,8 @@ button a {
 
 }
 
+/* ヘッダーnav */
+
 .headernav{
   background-color: #FF6666;
 }
@@ -75,11 +79,10 @@ button a {
 
 }
 
-.calender__container {
-  width: 75%;
-  margin: 50px auto;
-}
 
+
+
+/* how to */
 #how-to {
   background-color: white;
   color: #FF6666;
@@ -209,20 +212,45 @@ button a {
   margin:50px 0 0 auto;
 }
 
+/* カレンダー */
 
-
-
-/* #calender {
-  background-color: #F1E893;
-  border: #F16780 10px double;
-  border-spacing: 0;
-  border-collapse: collapse;
+.calender__container {
+  width: 75%;
+  margin: 50px auto;
 }
 
-#calender th {
-  border: #F16780 2px solid;
-} */
 
+.fc-button-primary {
+    color: #fff;
+    background-color: #fc6565;
+    border-color: #fc6565;
+}
+
+.calender__container--for-guest{
+  opacity: 0.6;
+  position: relative;
+}
+
+.calender__image-for-guest{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding: 0;
+　}
+.calender__message-for-guest{
+  color: #ff6666;
+  background-color: #f0f8ff;
+  padding:30px;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* 作成、編集画面 */
 #create, #edit {
   background-image: url("/images/torso.png");
   background-repeat: no-repeat;
@@ -277,6 +305,8 @@ input {
 
 }
 
+
+/* 詳細画面 */
 #detail {
   width:60%;
   margin:5% auto;
@@ -308,8 +338,6 @@ input {
   z-index: -2;
 }
 
-
-
 .coordinate__title {
   color: #FF6666;
   padding: 8px;
@@ -326,7 +354,10 @@ input {
 .coordinate__item--title, .coordinate__ivent--title {
   font-size: 1.5em;
   color: #ff6666;
-  padding-bottom: 10px
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  display: inline-block;
+  border-bottom:  #ff6666 2px solid;
 }
 
 .coordinate__item li {
@@ -341,7 +372,12 @@ input {
 .detail__button {
   text-align: right;
   padding:20px;
+
 }
+.coordinate__edit {
+  margin-right: 20px;
+}
+
 
 
 
@@ -375,11 +411,11 @@ input {
     margin: 5% 10% 10% 70%;
   }
 
+
   .calender__container {
     width: 98%;
     margin: 0 auto;
   }
-
 
 
 
