@@ -66,15 +66,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     dateClick: function(info) {
       console.log("info", info);
-
       info.dayEl.style.backgroundColor = '#ff6666';
       // var str = moment( .date ).format( 'YYYYMMDD' );
-
       var redirectUrl = `/admin/coordinate/create?date=${info.dateStr}`;
-      var coordinateId = coordinateDateHash[info.dateStr]['id'];
-      if (!!coordinateId) {
+      var coordinate = coordinateDateHash[info.dateStr];
+      if (!!coordinate) {
         // IDあった時
-        redirectUrl = `/admin/coordinate/detail?id=${coordinateId}`;
+        redirectUrl = `/admin/coordinate/detail?id=${coordinate['id']}`;
       }
       location.href = redirectUrl;
     },
@@ -84,10 +82,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //イベントのクリック時の処理を加えます
     eventClick: function(info) {
+      console.log("info", info);
       info.el.style.borderColor = '#ff6666';
-      var coordinateDateHash = @json($coordinateDateHash);
-      var coordinateId = coordinateDateHash[info.dateStr];
-      location.href = `/admin/coordinate/detail?id=${coordinateId}`;
+      location.href = `/admin/coordinate/detail?id=${info.event['id']}`;
+
 
     }
    });

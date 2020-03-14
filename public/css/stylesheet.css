@@ -226,6 +226,10 @@ button a {
     border-color: #fc6565;
 }
 
+.fc-event {
+  background-color: #ff6666;
+  border: #ff6666;
+}
 .calender__container--for-guest{
   opacity: 0.6;
   position: relative;
