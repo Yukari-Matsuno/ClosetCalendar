@@ -11,8 +11,13 @@ class CoordinateController extends Controller
 {
     public function add(Request $request)
     {
-      $coordinate = new Coordinate;
-      return view('admin.create', ['date' => $request->date]);
+      if (Auth::check()) {
+        $coordinate = new Coordinate;
+        return view('admin.create', ['date' => $request->date]);
+    } else {
+        return view('samplecreate');
+    }
+
     }
 
     public function create(Request $request)

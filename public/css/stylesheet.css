@@ -230,6 +230,12 @@ button a {
   background-color: #ff6666;
   border: #ff6666;
 }
+
+.fc-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .calender__container--for-guest{
   opacity: 0.6;
   position: relative;

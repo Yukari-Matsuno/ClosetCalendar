@@ -22,8 +22,6 @@ class CalenderController extends Controller
         $coordinateDateHash[$coordinate->date]["image_path"]=$coordinate->image_path;
         $coordinateDateHash[$coordinate->date]["events"]=$coordinate->events;
       }
-
-    
       foreach($coordinateDateHash as $date=>$item){
         $events[] = [
           'id' => $item['id'],
@@ -31,8 +29,6 @@ class CalenderController extends Controller
           'start' => $date
         ];
       }
-
-
       return view('admin.calender', ['coordinateDateHash' => $coordinateDateHash, 'events' => $events]);
     } else {
       return view('calender');

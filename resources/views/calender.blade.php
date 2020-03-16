@@ -1,11 +1,13 @@
+<!-- ログインしてない時の表示カレンダー -->
+
 @extends('layouts.layouts')
 
 @section('title', 'Closet Calender')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
-
 
 <script>
 
@@ -13,7 +15,7 @@
 var date_now = new Date();
 var date_start = new Date(date_now.getFullYear(), date_now.getMonth(), 1);
 var date_end = new Date(date_now.getFullYear(), date_now.getMonth(), 1);
-var days = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"];
+var days = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"]; 
 date_end.setMonth(date_end.getMonth()+12);
 date_start.setMonth(date_start.getMonth()-12);
 
@@ -22,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var calendar = new FullCalendar.Calendar(document.getElementById("calendar"), {
 
     //プラグインを読み込みます
-    plugins: ["dayGrid"],
+    plugins: ["dayGrid", "interaction"],
 
     //ヘッダー内の配置を、左に前月ボタン、中央にタイトル、右に次月ボタンに設定します
     header: {
@@ -31,11 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
       right:" next"
     },
 
-    //ボタンのテキストを書き換えます
-    // buttonText: {
-    //   prev: "前の月",
-    //   next: "次の月"
-    // },
+
 
     //デフォルト日を本日に設定します
     defaultDate: date_now,
@@ -46,8 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
       end: date_end
     },
 
-    //イベント情報をJSONファイルから読み込みます
-    events: "events.json",
 
     //タイトルを書き換えます（2019年8月）
     titleFormat: function(obj) {
@@ -58,6 +54,21 @@ document.addEventListener("DOMContentLoaded", function() {
     columnHeaderText: function(obj) {
       return days[obj.getDay()];
     },
+
+    dateClick: function(info) {
+      console.log("info", info);
+      info.dayEl.style.backgroundColor = '#ff6666';
+      location.href = 'create/sample';
+    },
+
+    //イベント情報をJSONファイルから読み込みます
+  //   events: [
+  //   {
+  //     id: 'a',
+  //     title: 'my event',
+  //     start: '2018-09-01'
+  //   }
+  // ],
 
     //イベントのクリック時の処理を加えます
     eventClick: function(obj) {
