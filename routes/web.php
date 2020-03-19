@@ -17,7 +17,7 @@ Route::get('/home', 'CalenderController@index');
 Route::get('calender', 'CalenderController@index');
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
-Route::get('create/sample', 'Admin\CoordinateController@add');
+// Route::get('create/sample', 'Admin\CoordinateController@add');
 
 Route::group(['prefix' => 'admin'], function(){
     Route::get('calender', 'CalenderController@index')->middleware('auth');

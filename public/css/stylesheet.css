@@ -231,10 +231,11 @@ button a {
   border: #ff6666;
 }
 
-.fc-title {
+.fc-content {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  cursor: pointer;
 }
 .calender__container--for-guest{
   opacity: 0.6;
@@ -340,7 +341,7 @@ input {
   background: repeating-linear-gradient(-45deg, #FF6666, #FF6666 5px, #ffc6c6 0, #ffc6c6 10px); /* ストライプの色 */
   border-bottom: 1px solid #ff6666; /* タイトル部分下線 */
   content: '';
-  height: 30px; /* タイトル部分高さ */
+  height: 40px; /* タイトル部分高さ */
   position: absolute;
   top: 0;
   left: 0;
@@ -351,8 +352,12 @@ input {
 .coordinate__title {
   color: #FF6666;
   padding: 8px;
-
   border-bottom:2px solid #FF6666;
+}
+
+.coordinate__photo {
+  width:50%;
+  height:auto;
 }
 
 .coordinate__item, .coordinate__ivent {
@@ -424,7 +429,7 @@ input {
 
   .calender__container {
     width: 98%;
-    margin: 0 auto;
+    margin: 50px auto;
   }
 
 
@@ -433,14 +438,11 @@ input {
     background-image: none;
   }
 
-  .container {
-    padding-top: 50px;
-    background-image: url("/images/lace.jpg");
-  }
+
 
    form {
     width: 80%;
-    margin:0 auto;
+    margin:50px auto;
   }
 
   .items, .event, .photo{
@@ -471,6 +473,46 @@ input {
   .headernav li{
     border: white 1px solid;
   }
+
+  #detail {
+    width:90%;
+  }
+
+  #detail:after {
+    height: 30px;
+  }
+
+  .coordinate__title {
+    font-size: 5vw;
+  }
+
+
+  .coordinate__photo {
+    margin:0 auto;
+    width:80%;
+    height:auto;
+    display: block;
+  }
+
+  .coordinate__item--title, .coordinate__ivent--title {
+    font-size: 1.2em;
+  }
+
+
+  .coordinate__ivent--text {
+    padding: 0 0 30px 30px;
+    font-size: 1em;
+  }
+
+  .detail__button {
+    text-align: right;
+    padding:20px;
+
+  }
+  .coordinate__edit {
+    margin-right: 20px;
+  }
+
 
 
 }

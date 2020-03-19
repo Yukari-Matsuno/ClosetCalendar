@@ -7,13 +7,15 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Coordinate;
 
+
 class CoordinateController extends Controller
 {
     public function add(Request $request)
     {
+      $user_id = Auth::id();
       if (Auth::check()) {
         $coordinate = new Coordinate;
-        return view('admin.create', ['date' => $request->date]);
+        return view('admin.create', ['date' => $request->date, 'user_id' => $user_id ]);
     } else {
         return view('samplecreate');
     }
@@ -22,6 +24,7 @@ class CoordinateController extends Controller
 
     public function create(Request $request)
     {
+      $user_id = Auth::id();
       $coordinate = new Coordinate;
       $form = $request->all();
 
@@ -42,6 +45,7 @@ class CoordinateController extends Controller
       $form["shoes"] == null ? "" : $coordinate->shoes = $form["shoes"];
       $form["events"] == null ? "" : $coordinate->events = $form["events"];
       $coordinate->date = $form["date"];
+      $coordinate->user_id = $form["user_id"];
 
       // データベースに保存する
       $coordinate->save();

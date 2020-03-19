@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Coordinate;
+use App\User;
 
 
 
@@ -12,20 +13,21 @@ class CalenderController extends Controller
 {
   public function index()
   {
+    $user_id = Auth::id();
     if (Auth::check()) {
       // Coordinateの一覧を取得
-      $coordinates = Coordinate::all();
+      $coordinates = Coordinate::whereRaw("user_id = ?", Auth::id())->get();
       // 日付けをキーとし、Cordinate::idとする連想配列を作る
       $coordinateDateHash = [];
       foreach ($coordinates as $coordinate) {
         $coordinateDateHash[$coordinate->date]["id"]=$coordinate->id;
-        $coordinateDateHash[$coordinate->date]["image_path"]=$coordinate->image_path;
         $coordinateDateHash[$coordinate->date]["events"]=$coordinate->events;
       }
+      $events = [];
       foreach($coordinateDateHash as $date=>$item){
         $events[] = [
           'id' => $item['id'],
-          'title' => $item['image_path'] . $item['events'],
+          'title' => $item['events'],
           'start' => $date
         ];
       }

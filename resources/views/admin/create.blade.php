@@ -26,6 +26,7 @@
     </dl>
     <button type="submit" class="button square-button">記録する</button>
     <input type="hidden" name="date" value="{{ $date }}">
+    <input type="hidden" name="user_id" value="{{ $user_id }}">
     {{ csrf_field() }}
   </form>
 </div>

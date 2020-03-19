@@ -5,9 +5,9 @@
 @section('content')
 <main id="detail">
   <h1 class="coordinate__title">Coordinate Of {{ substr($coordinate_items->date, 0, 4) . "/" . substr($coordinate_items->date, 5, 2) . "/" . substr($coordinate_items->date, 8, 2) }}</h1>
-  <div class="coordinate__photo">
+  <div class="coordinate__photo--wrapper">
     @if ($coordinate_items->image_path)
-    <img src="{{ asset('storage/image/' . $coordinate_items->image_path)}}" alt="コーディネートの写真">
+    <img src="{{ asset('storage/image/' . $coordinate_items->image_path)}}" class="coordinate__photo" alt="コーディネートの写真">
     @endif
     </div>
   <div class="coordinate__item">

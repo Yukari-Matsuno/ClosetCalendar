@@ -15,7 +15,7 @@
 var date_now = new Date();
 var date_start = new Date(date_now.getFullYear(), date_now.getMonth(), 1);
 var date_end = new Date(date_now.getFullYear(), date_now.getMonth(), 1);
-var days = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"]; 
+var days = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"];
 date_end.setMonth(date_end.getMonth()+12);
 date_start.setMonth(date_start.getMonth()-12);
 
@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function() {
       return days[obj.getDay()];
     },
 
-    dateClick: function(info) {
-      console.log("info", info);
-      info.dayEl.style.backgroundColor = '#ff6666';
-      location.href = 'create/sample';
-    },
+    // dateClick: function(info) {
+    //   console.log("info", info);
+    //   info.dayEl.style.backgroundColor = '#ff6666';
+    //   location.href = 'create/sample';
+    // },
 
     //イベント情報をJSONファイルから読み込みます
   //   events: [
