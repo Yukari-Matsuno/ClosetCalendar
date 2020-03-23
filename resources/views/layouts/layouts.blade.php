@@ -24,7 +24,7 @@
         @else
             <li><a href="{{ route('logout') }}">Logout</a></li>
         @endguest
-          <li><a href="{{ url('how-to')}}">How To</a></li>
+          <li><a href="{{ url('how-to')}}">What is ?</a></li>
         </ul>
       </nav>
   </header>

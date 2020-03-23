@@ -101,14 +101,14 @@ button a {
 }
 
 .how-to__probrem--image {
-  float: left;
+  float: right;
   width: 30%;
   height: auto;
   margin-top: 2em;
 }
 
 .how-to__probrem--text {
-  float: left;
+  float: right;
   width: 40%;
   position: relative;
   margin: 0em 0 2em 8%;
@@ -237,9 +237,19 @@ button a {
   overflow: hidden;
   cursor: pointer;
 }
+
+/* ログインしてない時のカレンダー */
 .calender__container--for-guest{
-  opacity: 0.6;
+
   position: relative;
+}
+
+#calendar {
+
+}
+
+.calender__for-guest {
+  opacity: 0.4;
 }
 
 .calender__image-for-guest{
@@ -260,6 +270,27 @@ button a {
   font-size: 30px;
   text-align: center;
 }
+
+.calender__message-for-guest a{
+  text-decoration: none;
+  color: Red;
+}
+
+.fc-bgevent-skeleton td:first-child {
+  background-color: #ff6666;
+  opacity: 0.1;
+
+}
+.fc-bgevent-skeleton td:last-child {
+  background-color: #ff6666;
+  opacity: 0.1;
+}
+
+
+
+
+
+
 
 /* 作成、編集画面 */
 #create, #edit {
@@ -395,9 +426,10 @@ input {
 
 
 
-
+/* レスポンシブ対応 */
 @media screen and (max-width:767px) {
 
+/* インデックス */
   #index {
     background-image: url("/images/closet.jpg");
     background-position: top center;
@@ -405,7 +437,6 @@ input {
     background-repeat: no-repeat;
     background-size: cover;
   }
-
 
 
   .index__text {
@@ -426,19 +457,126 @@ input {
     margin: 5% 10% 10% 70%;
   }
 
+/* what is? */
+
+
+.how-to__contents {
+  margin: 5% 3%;
+  border: 3px solid #FF6666;
+}
+
+.how-to__contents h1 {
+  font-size: 12vw;
+}
+
+.how-to__probrem--image {
+  float: none;
+  width: 50%;
+  height: auto;
+  margin-top: 2em;
+}
+
+.how-to__probrem--text {
+  float: none;
+  width: 80%;
+  font-size: 4vw;
+}
+
+.how-to__probrem--text:before {
+  left: 7px;
+  width: 13px;
+  height: 12px;
+  bottom: -52px;
+}
+
+.how-to__probrem--text:after {
+  left: 9px;
+  width: 20px;
+  height: 18px;
+  bottom: -31px;
+}
+
+
+.num {
+  font-size: 8vw;
+  background-color: #FF6666;
+  color: white;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.num1 {
+  padding-right: 70%;
+}
+
+.num2 {
+  padding-left: 70%;
+}
+
+.how-to__main--describe--article {
+  width: 98%;
+  padding: 0;
+
+}
+
+/* .how-to__main--describe--article--1 {
+  padding: 0;
+}
+
+.how-to__main--describe--article--2 {
+  padding: 0;
+} */
+
+.how-to__main--describe--article img {
+  float: left;
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+
+}
+
+.how-to__main--describe--article p {
+  font-size: 4vw;
+  padding:10px 0 0 2%;
+}
+
+.how-to__main--describe--article--2 img{
+    float: right;
+}
+.how-to__main--describe--article--2 p{
+    float: right;
+    padding: 10px 2% 0 0;
+    text-align: right;
+}
+
+.how-to__contents--message {
+  margin-top: 100px;
+}
+
+.how-to__contents--message--text {
+  width: 98%;
+  float: none;
+  font-size: 6vw;
+  text-align: center;
+  margin: 0;
+}
+
+.how-to__contents--message--button {
+
+  margin:50px 0 0 auto;
+}
+
+/* カレンダー */
 
   .calender__container {
     width: 98%;
     margin: 50px auto;
   }
 
-
-
+/* 投稿・編集 */
   #create, #edit {
     background-image: none;
   }
-
-
 
    form {
     width: 80%;
@@ -474,6 +612,8 @@ input {
     border: white 1px solid;
   }
 
+
+/* コーディネート詳細 */
   #detail {
     width:90%;
   }
@@ -511,6 +651,12 @@ input {
   }
   .coordinate__edit {
     margin-right: 20px;
+  }
+
+  .button {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
   }
 
 

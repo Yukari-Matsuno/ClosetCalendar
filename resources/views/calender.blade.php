@@ -20,8 +20,14 @@ date_end.setMonth(date_end.getMonth()+12);
 date_start.setMonth(date_start.getMonth()-12);
 
 document.addEventListener("DOMContentLoaded", function() {
+  var start = @json($start);
+  var end = @json($end);
+
   //FullCalendarを生成します
   var calendar = new FullCalendar.Calendar(document.getElementById("calendar"), {
+
+
+
 
     //プラグインを読み込みます
     plugins: ["dayGrid", "interaction"],
@@ -33,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
       right:" next"
     },
 
-
+    businessHours:　true,
 
     //デフォルト日を本日に設定します
     defaultDate: date_now,
@@ -63,12 +69,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //イベント情報をJSONファイルから読み込みます
   //   events: [
+  //
   //   {
-  //     id: 'a',
-  //     title: 'my event',
-  //     start: '2018-09-01'
+  //     title: '使い方',
+  //     start: start,
+  //     end: end
   //   }
+  //
+  //
   // ],
+
+    events: [
+
+    {
+      title: 'How to use?',
+      start: start
+    }
+
+
+  ],
+
 
     //イベントのクリック時の処理を加えます
     eventClick: function(obj) {
@@ -83,12 +103,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 @section('content')
 <main id=closet-caleder>
-<h1 class="calender__message-for-guest">Welcome<br>Make Your Closet Clalendar !</h1>
+<h1 class="calender__message-for-guest">Welcome !<br><a href="{{ route('login') }}">Login</a> & Make Your Closet Clalendar</h1>
 <div class="calender__container calender__container--for-guest">
-  <div class="calender__image-for-guest">
+  <!-- <div class="calender__image-for-guest">
     <img src="images/select.jpg" alt="服を選ぶ女性" >
-  </div>
-  <div id ="calendar"></div>
+  </div> -->
+
+  <div id ="calendar" class="calender__for-guest"></div>
+
 </div>
 </main>
 

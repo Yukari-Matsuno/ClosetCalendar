@@ -12,7 +12,7 @@
 
 <body id="index">
   <main class=index__text>
-    <h1 class='logo'>Closet Cycle</h1>
+    <h1 class='logo'>Closet Calendar</h1>
     <p>PUT on DIFFERENT!</p>
     <p>PUT on ALL!</p>
     <button class="button index__button"><a href="{{ url('calender') }}">→</a></button>

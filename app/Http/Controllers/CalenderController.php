@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Coordinate;
 use App\User;
+use Carbon\Carbon;
 
 
 
@@ -33,7 +34,20 @@ class CalenderController extends Controller
       }
       return view('admin.calender', ['coordinateDateHash' => $coordinateDateHash, 'events' => $events]);
     } else {
-      return view('calender');
+
+        $now = Carbon::now();
+        $month = str_split($now->month);
+        if (count($month) == 1){
+          $month = "0" . $month[0];
+        } else {
+          $month = implode($month);
+        }
+        $start = $now->year. '-' . $month . '-' . '01';
+        $end = $now->year. '-' . $month . '-' . '02';
+
+
+      return view('calender', ['start' => $start, 'end' => $end]);
+
     }
   }
 

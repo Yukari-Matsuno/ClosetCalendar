@@ -14,12 +14,13 @@
   <main class="how-to__contents">
     <h1>HOW to USE</h1>
     <div class="how-to__probrem clearfix">
-      <img src="images/boy.png" alt="コーディネートに悩む人" class="how-to__probrem--image">
       <ul class="how-to__probrem--text">
         <li>あの人に会うのに、前もこの服だった気がする…</li>
         <li>気づいたら、同じ組み合わせばかり…</li>
         <li>出番が回ってこない服がある…</li>
       </ul>
+      <img src="images/boy.png" alt="コーディネートに悩む人" class="how-to__probrem--image">
+
     </div>
 
     <div class="how-to__main">
