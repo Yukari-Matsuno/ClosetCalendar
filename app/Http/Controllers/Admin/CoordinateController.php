@@ -69,8 +69,8 @@ class CoordinateController extends Controller
       // 送信されてきたフォームデータを格納する
       $form = $request->all();
       if (isset($form['photo'])) {
-        $path = $request->file('photo')->store('public/image');
-        $coordinate->image_path = basename($path);
+        $path = Storage::disk('s3')->putFile('/',$form['photo'],'public');
+        $coordinate->image_path = Storage::disk('s3')->url($path);;
         unset($form['photo']);
       } elseif (isset($request->remove)) {
         $coordinate->image_path = null;
