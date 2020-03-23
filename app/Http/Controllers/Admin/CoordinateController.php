@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Coordinate;
+use Storage;
 
 
 class CoordinateController extends Controller
@@ -29,8 +30,8 @@ class CoordinateController extends Controller
       $form = $request->all();
 
       if (isset($form['photo'])) {
-        $path = $request->file('photo')->store('public/image');
-        $coordinate->image_path = basename($path);
+        $path = Storage::disk('s3')->putFile('/',$form['photo'],'public');
+        $coordinate->image_path = Storage::disk('s3')->url($path);
       } else {
         $coordinate->image_path = null;
       }
