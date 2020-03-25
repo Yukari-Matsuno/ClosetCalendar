@@ -28,7 +28,18 @@
 
   <div class="detail__button">
     <button class="square-button button coordinate__edit"><a href="{{ action('Admin\CoordinateController@edit', ['id' => $coordinate_items->id]) }}">編集する</a></button>
-    <button class="square-button button"><a href="{{ action('Admin\CoordinateController@destroy', ['id' => $coordinate_items->id]) }}">削除する</a></button>
+    <button class="square-button button" id="check">削除する</button>
+    <script>
+      var check = document.getElementById('check');
+      check.addEventListener('click', function() {
+        check = window.confirm('削除してOK？');
+        if(check == true){
+          location.href = "{{ action('Admin\CoordinateController@destroy', ['id' => $coordinate_items->id]) }}";
+        }else{
+
+        }
+      })
+    </script>
   </div>
 </main>
 
