@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
@@ -103,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <main id=closet-caleder>
 <div class="calender__container">
   <div id ="calendar"></div>
+  <button class="button calendar__addtoday"><a href="{{ url('admin/coordinate/create?date=') . $today }}"><i class="fas fa-pen fa-2x"></i></a></button>
 </div>
 </main>
 

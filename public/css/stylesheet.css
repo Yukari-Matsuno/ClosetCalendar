@@ -45,6 +45,7 @@
 button a {
   text-decoration: none;
   color: #fff;
+  display: block;
 
 
 }
@@ -217,6 +218,16 @@ button a {
 .calender__container {
   width: 75%;
   margin: 50px auto;
+  position: relative;
+}
+
+.calendar__addtoday {
+position: absolute;
+bottom: 5%;
+right: 5%;
+z-index: 2;
+cursor: pointer;
+
 }
 
 
@@ -572,6 +583,8 @@ input {
     width: 98%;
     margin: 50px auto;
   }
+
+
 
 /* 投稿・編集 */
   #create, #edit {

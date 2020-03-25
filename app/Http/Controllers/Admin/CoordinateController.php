@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Coordinate;
 use Storage;
+use Carbon\Carbon;
 
 
 class CoordinateController extends Controller
@@ -16,7 +17,9 @@ class CoordinateController extends Controller
       $user_id = Auth::id();
       if (Auth::check()) {
         $coordinate = new Coordinate;
-        return view('admin.create', ['date' => $request->date, 'user_id' => $user_id ]);
+
+
+        return view('admin.create', ['date' => $request->date, 'user_id' => $user_id]);
     } else {
         return view('samplecreate');
     }

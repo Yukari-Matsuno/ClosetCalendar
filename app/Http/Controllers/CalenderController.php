@@ -32,7 +32,8 @@ class CalenderController extends Controller
           'start' => $date
         ];
       }
-      return view('admin.calender', ['coordinateDateHash' => $coordinateDateHash, 'events' => $events]);
+      $today = Carbon::today()->toDateString();
+      return view('admin.calender', ['coordinateDateHash' => $coordinateDateHash, 'events' => $events, 'today' => $today]);
     } else {
 
         $now = Carbon::now();
