@@ -35,8 +35,6 @@
         check = window.confirm('削除してOK？');
         if(check == true){
           location.href = "{{ action('Admin\CoordinateController@destroy', ['id' => $coordinate_items->id]) }}";
-        }else{
-
         }
       })
     </script>
