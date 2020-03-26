@@ -32,6 +32,14 @@ class CalenderController extends Controller
           'start' => $date
         ];
       }
+      $user = Auth::user();
+      $birthday = $user->birthday;
+      $events[] = [
+        'id' => 'BD',
+        'title' => 'HappyBirthday!',
+        'start' => $birthday
+      ];
+
       $today = Carbon::today()->toDateString();
       return view('admin.calender', ['coordinateDateHash' => $coordinateDateHash, 'events' => $events, 'today' => $today]);
     } else {

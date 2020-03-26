@@ -220,6 +220,9 @@ button a {
   margin: 50px auto;
   position: relative;
 }
+#calendar {
+
+}
 
 .calendar__addtoday {
 position: absolute;

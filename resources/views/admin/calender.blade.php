@@ -83,7 +83,13 @@ document.addEventListener("DOMContentLoaded", function() {
     eventClick: function(info) {
       console.log("info", info);
       info.el.style.borderColor = '#ff6666';
-      location.href = `/admin/coordinate/detail?id=${info.event['id']}`;
+      if(info.event['id'] === 'BD'){
+        location.href = '/admin/happybirthday';
+      } else {
+        location.href = `/admin/coordinate/detail?id=${info.event['id']}`;
+      }
+
+
 
 
     }
