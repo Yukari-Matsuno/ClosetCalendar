@@ -581,6 +581,11 @@ input {
     margin: 50px auto;
   }
 
+  .calender__message-for-guest {
+    font-size: 5vw;
+    padding: 10px 3px;
+  }
+
 
 
 /* 投稿・編集 */
