@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //タイトルを書き換えます（2019年8月）
     titleFormat: function(obj) {
-      return obj.date.year+"年"+(obj.date.month+1)+"月";
+      return obj.date.year+"/"+(obj.date.month+1);
     },
 
     //曜日のテキストを書き換えます（日〜土）

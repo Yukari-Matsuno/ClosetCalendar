@@ -255,9 +255,7 @@ cursor: pointer;
   position: relative;
 }
 
-#calendar {
 
-}
 
 .calender__for-guest {
   opacity: 0.4;
@@ -308,6 +306,11 @@ cursor: pointer;
   background-image: url("/images/torso.png");
   background-repeat: no-repeat;
   background-position: right;
+}
+
+.create__title {
+  font-size: 3vw;
+  font-weight: normal;
 }
 
 form{
@@ -530,13 +533,7 @@ input {
 
 }
 
-/* .how-to__main--describe--article--1 {
-  padding: 0;
-}
 
-.how-to__main--describe--article--2 {
-  padding: 0;
-} */
 
 .how-to__main--describe--article img {
   float: left;
@@ -591,6 +588,12 @@ input {
     background-image: none;
   }
 
+  .create__title {
+    font-size: 5vw;
+    font-weight: normal;
+    padding-bottom: 30px;
+  }
+
    form {
     width: 80%;
     margin:50px auto;
@@ -615,15 +618,16 @@ input {
     margin-left: 20px
   }
 
-
-
   input {
      width: 76%;
   }
 
+
+
   .headernav li{
     border: white 1px solid;
   }
+
 
 
 /* コーディネート詳細 */
@@ -670,6 +674,13 @@ input {
     width: 40px;
     height: 40px;
     line-height: 40px;
+  }
+
+  .square-button {
+    border-radius: 5px;
+    height: 30px;
+    width: auto;
+    line-height: normal;
   }
 
 

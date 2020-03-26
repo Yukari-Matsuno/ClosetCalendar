@@ -6,7 +6,7 @@
 <main id="create">
 <div class="form">
   <form action="{{ action('Admin\CoordinateController@create') }}" method="post" enctype="multipart/form-data">
-    <p>{{ substr($date, 0, 4) . "/" . substr($date, 5, 2) . "/" . substr($date, 8, 2) }}のコーディネート</p>
+    <h1 class="create__title">{{ substr($date, 0, 4) . "/" . substr($date, 5, 2) . "/" . substr($date, 8, 2) }}のコーディネート</h1>
     <p class="items">何を着た？(着る？)</p>
     <dl>
       <dt>Tops</dt>

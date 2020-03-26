@@ -15,8 +15,17 @@
     <h1 class='logo'>Closet Calendar</h1>
     <p>PUT on DIFFERENT!</p>
     <p>PUT on ALL!</p>
-    <button class="button index__button"><a href="{{ url('calender') }}">→</a></button>
+    <button class="button index__button"><a href="{{ url('calender') }}">→</i></a></button>
   </main>
 </body>
 
 </html>
+
+
+
+
+
+
+    // 取得した値を標準出力するために"XXXXXX"をどう書き換える？
+
+?>
