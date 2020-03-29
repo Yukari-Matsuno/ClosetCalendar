@@ -28,4 +28,5 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post('coordinate/edit', 'Admin\CoordinateController@update')->middleware('auth');
     Route::get('coordinate/delete', 'Admin\CoordinateController@destroy')->middleware('auth');
     Route::get('happybirthday', 'Admin\BirthdayController@show')->middleware('auth');
+    Route::get('Coordinate/list','Admin\CoordinateListController@index')->middleware('auth');
  });

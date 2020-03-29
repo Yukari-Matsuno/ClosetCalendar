@@ -111,6 +111,9 @@ document.addEventListener("DOMContentLoaded", function() {
   <div id ="calendar"></div>
   <button class="button calendar__addtoday"><a href="{{ url('admin/coordinate/create?date=') . $today }}"><i class="fas fa-pen fa-2x"></i></a></button>
 </div>
+<button class="button square-button"><a href="{{ action('Admin\CoordinateListController@index') }}">コーディネートを一覧で見る</a></button>
+
+
 </main>
 
 

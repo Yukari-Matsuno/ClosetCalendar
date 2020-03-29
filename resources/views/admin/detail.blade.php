@@ -1,6 +1,8 @@
 @extends('layouts.layouts')
 
 @section('title', '{{ $coordinate_items->date }}のコーディネート')
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="./jquery.raty.js"></script>
 
 @section('content')
 <main id="detail">
@@ -25,6 +27,10 @@
     <p class="coordinate__ivent--title">{{ substr($coordinate_items->date, 5, 2) . "/" . substr($coordinate_items->date, 8, 2) }}の出来事</p>
     <p class="coordinate__ivent--text">{{ $coordinate_items->events }}</p>
   </div>
+
+  <script type="text/javascript">
+$('div').raty();
+</script>
 
   <div class="detail__button">
     <button class="square-button button coordinate__edit"><a href="{{ action('Admin\CoordinateController@edit', ['id' => $coordinate_items->id]) }}">編集する</a></button>
