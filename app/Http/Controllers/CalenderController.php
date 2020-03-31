@@ -63,6 +63,7 @@ class CalenderController extends Controller
   public function show(Request $request) {
     $coordinate = Coordinate::find($request->id);
     $items = [$coordinate->tops, $coordinate->bottoms, $coordinate->outer, $coordinate->shoes, $coordinate->other];
+    
     return view('admin.detail', ['coordinate_items' => $coordinate, 'use_items' => $items]);
   }
 

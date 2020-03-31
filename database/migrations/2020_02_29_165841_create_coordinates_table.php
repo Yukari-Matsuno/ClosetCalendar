@@ -24,6 +24,7 @@ class CreateCoordinatesTable extends Migration
             $table->string('events')->default('Nothing much...');
             $table->string('image_path')->nullable();
             $table->string('date');
+            $table->integer('rating');
             $table->timestamps();
 
         });

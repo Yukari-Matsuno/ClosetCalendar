@@ -28,6 +28,7 @@ class CoordinateController extends Controller
 
     public function create(Request $request)
     {
+      // dd($request);
       $user_id = Auth::id();
       $coordinate = new Coordinate;
       $form = $request->all();
@@ -50,6 +51,7 @@ class CoordinateController extends Controller
       $form["events"] == null ? "" : $coordinate->events = $form["events"];
       $coordinate->date = $form["date"];
       $coordinate->user_id = $form["user_id"];
+      $coordinate->rating = $form["rating"];
 
       // データベースに保存する
       $coordinate->save();
@@ -89,6 +91,7 @@ class CoordinateController extends Controller
       $form["shoes"] == null ? "" : $coordinate->shoes = $form["shoes"];
       $form["events"] == null ? "" : $coordinate->events = $form["events"];
       $coordinate->date = $form["date"];
+      $coordinate->rating = $form["rating"];
       $coordinate->save();
 
       return redirect('admin/calender');

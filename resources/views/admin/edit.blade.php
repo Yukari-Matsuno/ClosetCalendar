@@ -26,11 +26,22 @@
         <div>
         設定中: {{ $coordinate_items->image_path }}
         </div>
+
         <div class="form-check">
           <label class="form-check-label">
             <input type="checkbox" class="form-check-input" name="remove" value="true">削除
           </label>
         </div>
+        <dt class="rating">今日のコーディネートは？</dt>
+        <dd>
+          <select name="rating" class="rating">
+            <option value="0" <?php if ($coordinate_items->rating == 0){ echo "selected"; } ?></option>
+            <option value="5" <?php if ($coordinate_items->rating == 5){ echo "selected"; } ?>>お気に入り！</option>
+            <option value="4" <?php if ($coordinate_items->rating == 4){ echo "selected"; } ?>>まぁまぁ</option>
+            <option value="3" <?php if ($coordinate_items->rating == 3){ echo "selected"; } ?>>普通</option>
+            <option value="2" <?php if ($coordinate_items->rating == 2){ echo "selected"; } ?>>イマイチ…</option>
+            <option value="1" <?php if ($coordinate_items->rating == 1){ echo "selected"; } ?>>ダメ</option>
+          </select>
     </dl>
     <input type="hidden" name="id" value="{{ $coordinate_items->id }}">
     <input type="hidden" name="date" value="{{ $coordinate_items->date }}">

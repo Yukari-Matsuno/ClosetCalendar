@@ -1,8 +1,7 @@
 @extends('layouts.layouts')
 
 @section('title', '{{ $coordinate_items->date }}のコーディネート')
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script type="text/javascript" src="./jquery.raty.js"></script>
+
 
 @section('content')
 <main id="detail">
@@ -11,7 +10,15 @@
     @if ($coordinate_items->image_path)
     <img src="{{ $coordinate_items->image_path }}" class="coordinate__photo" alt="コーディネートの写真">
     @endif
-    </div>
+  </div>
+
+  <div id="app">
+      <star-rating  read-only="true"
+                    star-size="20"
+                    rating="{{ $coordinate_items->rating }}">
+      </star-rating>
+  </div>
+
   <div class="coordinate__item">
     <p class="coordinate__item--title">使用アイテム</p>
     <ul>
@@ -28,9 +35,7 @@
     <p class="coordinate__ivent--text">{{ $coordinate_items->events }}</p>
   </div>
 
-  <script type="text/javascript">
-$('div').raty();
-</script>
+
 
   <div class="detail__button">
     <button class="square-button button coordinate__edit"><a href="{{ action('Admin\CoordinateController@edit', ['id' => $coordinate_items->id]) }}">編集する</a></button>
@@ -46,5 +51,6 @@ $('div').raty();
     </script>
   </div>
 </main>
+<script src="/js/app.js"></script>
 
 @endsection
