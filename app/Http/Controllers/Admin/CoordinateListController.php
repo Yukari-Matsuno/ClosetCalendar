@@ -13,10 +13,36 @@ use Illuminate\Support\Facades\DB;
 
 class CoordinateListController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+      $order_request = $request->coordinatelist__order;
+      // dd($order_request);
       $user_id = Auth::id();
-      $coordinates = Coordinate::whereRaw("user_id = ?", Auth::id())->orderBy('date', 'desc')->simplepaginate(14);
 
-      return view('admin.coordinatelist',['coordinates' => $coordinates]);
+      if($order_request == ""){
+        $coordinates = Coordinate::where('user_id', Auth::id())->orderBy('date', 'desc')->simplepaginate(14);
+
+      } elseif($order_request == "favorite") {
+
+          $coordinates = Coordinate::where('user_id', Auth::id())->orderBy('rating', 'desc')->simplepaginate(14);
+          // dd($coordinates);
+      } else {
+          $coordinates = Coordinate::where('user_id', Auth::id())->orderBy('date', 'desc')->simplepaginate(14);
+      }
+      return view('admin.coordinatelist', ['coordinates' => $coordinates]);
+
+
+
+
+      // if($request == 'favorite'){
+      //
+      //   return redirect('admin/coordinate/list', ['coordinates' => $coordinates]);
+      // } elseif($request == 'date') {
+      //
+      //
+      // } else {
+      //
+      // }
+
+
     }
 }

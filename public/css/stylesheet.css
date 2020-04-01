@@ -296,7 +296,7 @@ button a {
     font-weight: normal;
 }
 
-form {
+#create form, #edit form {
     border: #FF6666 5px solid;
     border-radius: 5px;
     width: 50%;
@@ -425,11 +425,18 @@ input {
 }
 
 /*コーディネート一覧*/
-.coordinatelist__order {
-
+#coordinatelist__order {
   margin-right: 10%;
   float: right;
-  height: 25px;
+
+
+}
+
+#coordinatelist__order select {
+  color: #ff6666;
+  height: 30px;
+  border: #ff6666 solid 1px;
+
 }
 
 .coordinatelist__title {
