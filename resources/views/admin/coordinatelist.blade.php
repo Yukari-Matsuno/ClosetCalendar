@@ -4,6 +4,8 @@
 <!-- <link rel="stylesheet" href="{{ asset('/css/app.css') }}"> -->
 @section('content')
 <main id="coordinatelist">
+  <h1 class="coordinatelist__title">Coordinate List</h1>
+
   <form id="coordinatelist__order" action="{{ action('Admin\CoordinateListController@index') }}" method="get">
   <select name="coordinatelist__order">
     <option value="">並び替える</option>
@@ -14,9 +16,8 @@
 
 
 
-  <h1 class="coordinatelist__title">Coordinate List</h1>
 
-  <ul id="app">
+  <ul id="app" class="coordinatelist__eachday">
     @foreach ($coordinates as $coordinate)
     <li>
       <div class="clearfix coordinatelist__li">
@@ -40,7 +41,7 @@
 
           <div class="coordinatelist__li--rating">
               <star-rating  :read-only="true"
-                            :star-size="20"
+                            :star-size="10"
                             :rating="{{ $coordinate->rating }}">
               </star-rating>
           </div>

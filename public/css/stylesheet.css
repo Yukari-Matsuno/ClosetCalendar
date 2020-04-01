@@ -209,13 +209,14 @@ button a {
 .calender__container {
     width: 75%;
     margin: 50px auto;
-    position: relative;
+    margin-bottom: 0;
+
 }
 
-#calendar {}
+
 
 .calendar__addtoday {
-    position: absolute;
+    margin: 10px 0 0 80%;
     bottom: 5%;
     right: 5%;
     z-index: 2;
@@ -238,6 +239,10 @@ button a {
     text-overflow: ellipsis;
     overflow: hidden;
     cursor: pointer;
+}
+
+.calendar__showlist {
+  margin: 0 0 80px 12%;
 }
 
 /* ログインしてない時のカレンダー */
@@ -318,7 +323,8 @@ form dl dd {
     padding: 0 0 20px 80px;
 }
 
-.event, .photo {
+
+.event, .photo, .rating {
     font-size: 1.2em;
     float: none;
 }
@@ -426,8 +432,8 @@ input {
 
 /*コーディネート一覧*/
 #coordinatelist__order {
-  margin-right: 10%;
-  float: right;
+  margin-left: 70%;
+
 
 
 }
@@ -678,24 +684,61 @@ margin: 30px 0 0 12%;
         padding: 10px 3px;
     }
 
+    .calendar__addtoday{
+      height: 60px !important;
+      width: 60px !important;
+      margin: 0 0 0 78%;
+    }
+    .calendar__showlist {
+    margin: 0 0 80px 3%;
+    }
+
     /* 投稿・編集 */
     #create, #edit {
         background-image: none;
     }
 
     .create__title {
-        font-size: 5vw;
+        font-size: 6vw;
         font-weight: normal;
-        padding-bottom: 30px;
+        padding-bottom: 5px;
+        border-bottom: 2px #ff6666 solid;
+        margin: 20px 8px 30px;
     }
 
-    form {
-        width: 80%;
-        margin: 50px auto;
+    #create form, #edit form {
+        width: 95%;
+        margin: 40px auto;
+        padding: 50px 0 30px 10px;
+        border: 2px solid #FF6666;
+        position: relative;
     }
 
-    .items, .event, .photo {
+    #create form:before, #edit form:before {
+      content: '';
+      color: white;
+      padding: 5px 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    #create form:after, #edit form:after {
+      background: repeating-linear-gradient(-45deg, #FF6666, #FF6666 5px, #ffc6c6 0, #ffc6c6 10px);
+      border-bottom: 1px solid #ff6666;
+      content: '';
+      height: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -2;
+    }
+
+    .items, .event, .photo, .rating {
         color: #ff6666;
+
     }
 
     .photoupload, .form-check-input {
@@ -718,26 +761,43 @@ margin: 30px 0 0 12%;
 
     .headernav li {
         border: white 1px solid;
+        font-size: 5vw;
     }
 
     /* コーディネート詳細 */
     #detail {
-        width: 90%;
-    }
 
+      width: 95%;
+      margin: 5% auto;
+      border: 2px solid #FF6666;
+      /* 線の太さ・種類・色 */
+      padding: 35px 0px 10px 0px;
+      /* 内側の余白 上・右・左・下 */
+      position: relative;
+
+    }
     #detail:after {
         height: 30px;
     }
 
     .coordinate__title {
-        font-size: 5vw;
+        font-size: 7vw;
+        margin: 15px 10px;
+    }
+
+    .coordinate__item, .coordinate__ivent {
+      margin: 10px;
     }
 
     .coordinate__photo {
         margin: 0 auto;
-        width: 80%;
+        width: 90%;
         height: auto;
         display: block;
+    }
+
+    .vue-star-rating {
+      margin: 5px 0 5px 4%;
     }
 
     .coordinate__item--title, .coordinate__ivent--title {
@@ -770,4 +830,67 @@ margin: 30px 0 0 12%;
         width: auto;
         line-height: normal;
     }
+    /* コーディネート一覧 */
+    .coordinatelist__title {
+        color: #ff6666;
+        padding-left: 10%;
+        font-size: 10vw;
+    }
+    #coordinatelist__order {
+        margin-left: 60%
+    }
+
+    .coordinatelist__eachday {
+      padding: 0;
+    }
+
+    .coordinatelist__li {
+      width: 96%;
+      margin: 10px auto;
+      border: #ff6666 solid 1px;
+    }
+
+    .coordinatelist__li--date {
+      width: 90%;
+      margin: 10px auto;
+      font-size: 1em;
+      border-bottom: #ff6666 solid 1px;
+      padding-bottom: 2px;
+    }
+
+    .coordinatelist__li--itemli p {
+      font-size: 0.8em;
+      border-bottom: 1px #ff6666 solid;
+      padding-bottom: 2px;
+    }
+
+
+    .coordinatelist__li--photo {
+      float: left;
+      width: 34%;
+      height: auto;
+      display: block;
+      margin: 0 0 1% 1%;
+    }
+
+    .coordinatelist__li--itemli {
+      float: left;
+      width: 60%;
+      margin: 0 2%;
+    }
+
+    .coordinatelist__li--itemli li {
+      font-size: 0.4em;
+      padding: 2px 4px 2px 0;
+    }
+
+    .coordinatelist__li--rating {
+    margin: 0px 10px;
+    }
+
+    .vue-star-rating-rating-text {
+      font-size: 0.1em;
+    }
+
+
 }

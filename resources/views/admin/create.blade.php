@@ -26,7 +26,7 @@
       <dd><input type="file" name="photo" class="photoupload"></dd>
       <dt class="rating">今日のコーディネートは？</dt>
       <dd>
-        <select name="rating" class="rating">
+        <select name="rating" class="rating-select">
           <option value="0"></option>
           <option value="5">お気に入り！</option>
           <option value="4">まぁまぁ</option>

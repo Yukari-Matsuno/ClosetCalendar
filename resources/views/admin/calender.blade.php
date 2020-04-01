@@ -109,9 +109,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <main id=closet-caleder>
 <div class="calender__container">
   <div id ="calendar"></div>
-  <button class="button calendar__addtoday"><a href="{{ url('admin/coordinate/create?date=') . $today }}"><i class="fas fa-pen fa-2x"></i></a></button>
 </div>
-<button class="button square-button"><a href="{{ action('Admin\CoordinateListController@index') }}">コーディネートを一覧で見る</a></button>
+<button class="button calendar__addtoday"><a href="{{ url('admin/coordinate/create?date=') . $today }}"><i class="fas fa-pen fa-2x"></i></a></button>
+<button class="button square-button calendar__showlist"><a href="{{ action('Admin\CoordinateListController@index') }}">コーディネートを一覧で見る</a></button>
 
 
 </main>
