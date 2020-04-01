@@ -22,7 +22,7 @@
       <div class="clearfix coordinatelist__li">
         <p class="coordinatelist__li--date">{{substr($coordinate->date, 5, 2) . "/" . substr($coordinate->date, 8, 2) . "　" . $coordinate->events}}</p>
         @if ($coordinate->image_path)
-        <img src="{{ asset('storage/image/' . $coordinate->image_path) }}" class="coordinatelist__li--photo">
+        <img src="{{ $coordinate->image_path }}" class="coordinatelist__li--photo">
         @else
         <img src="/images/torso.png" class="coordinatelist__li--photo">
         @endif
