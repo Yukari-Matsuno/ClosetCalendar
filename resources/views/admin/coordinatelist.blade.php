@@ -21,7 +21,7 @@
     @foreach ($coordinates as $coordinate)
     <li>
       <div class="clearfix coordinatelist__li">
-        <p class="coordinatelist__li--date">{{substr($coordinate->date, 5, 2) . "/" . substr($coordinate->date, 8, 2) . "　" . $coordinate->events}}</p>
+        <p class="coordinatelist__li--date"><a href="{{ url('admin/coordinate/detail?id=') . $coordinate->id }}">{{substr($coordinate->date, 5, 2) . "/" . substr($coordinate->date, 8, 2) . "　" . $coordinate->events}}</a></p>
         @if ($coordinate->image_path)
         <img src="{{ $coordinate->image_path }}" class="coordinatelist__li--photo">
         @else

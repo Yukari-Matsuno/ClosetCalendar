@@ -4,9 +4,12 @@
 
 @section('content')
 <main id="birthday">
-<h1>HappyBirthday{{ $name }}さん</h1>
-<p>素敵な1日をお過ごし下さい</p>
-<img src="/images/birthday.jpg">
+<div class="birthday__card">
+<p class="birthday__name">{{ $name }}さん</p>
+<p class="birthday__message">素敵な1日をお過ごし下さい</p>
+<img src="/images/birthday.jpg" class="birthday__image" alt="誕生日カードの画像">
+
+</div>
 </main>
 
 @endsection

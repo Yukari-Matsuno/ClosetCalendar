@@ -33,7 +33,11 @@ class CalenderController extends Controller
         ];
       }
       $user = Auth::user();
-      $birthday = $user->birthday;
+
+      $this_year = Carbon::now()->year;
+      $birth_year = substr($user->birthday, 0, 4);
+      $birthday = str_replace($birth_year, $this_year, $user->birthday);
+
       $events[] = [
         'id' => 'BD',
         'title' => 'HappyBirthday!',
@@ -63,7 +67,7 @@ class CalenderController extends Controller
   public function show(Request $request) {
     $coordinate = Coordinate::find($request->id);
     $items = [$coordinate->tops, $coordinate->bottoms, $coordinate->outer, $coordinate->shoes, $coordinate->other];
-    
+
     return view('admin.detail', ['coordinate_items' => $coordinate, 'use_items' => $items]);
   }
 

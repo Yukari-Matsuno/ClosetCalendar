@@ -466,11 +466,15 @@ input {
 .coordinatelist__li--date {
   font-size: 1.4em;
   margin-left: 30px;
-  color: #ff6666;
   border-bottom: #ff6666 solid 2px;
   display: block;
   width: 55%;
   padding-bottom: 5px;
+}
+
+.coordinatelist__li--date a {
+  text-decoration: none;
+  color: #ff6666;
 }
 
 .coordinatelist__li--photo {
@@ -540,6 +544,36 @@ margin: 30px 0 0 12%;
   margin: 0 10% 60px 75%;
 }
 
+/* 誕生日ページ */
+.birthday__card {
+  position: relative;
+  width: 60%;
+  margin: 50px auto;
+}
+
+.birthday__image {
+  width: 100%;
+  height: auto;
+}
+
+.birthday__name {
+  position: absolute;
+  top:32%;
+  left: 30%;
+  color: white;
+  font-size: 3em;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',　sans-serif;
+  padding-bottom: 30px;
+}
+
+.birthday__message {
+  position: absolute;
+  top:52%;
+  left: 34%;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',　sans-serif;
+}
 
 /* レスポンシブ対応 */
 @media screen and (max-width:767px) {
@@ -891,6 +925,20 @@ margin: 30px 0 0 12%;
     .vue-star-rating-rating-text {
       font-size: 0.1em;
     }
+
+    /* 誕生日画面 */
+    .birthday__card {
+      width: 80%;
+      margin: 30px auto;
+    }
+
+    .birthday__name {
+      font-size: 7vw;
+    }
+    .birthday__message {
+      font-size: 0.8em;
+    }
+
 
 
 }
