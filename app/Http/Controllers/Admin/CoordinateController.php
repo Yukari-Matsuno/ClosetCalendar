@@ -28,7 +28,7 @@ class CoordinateController extends Controller
 
     public function create(Request $request)
     {
-      // dd($request);
+
       $user_id = Auth::id();
       $coordinate = new Coordinate;
       $form = $request->all();
@@ -36,6 +36,25 @@ class CoordinateController extends Controller
       if (isset($form['photo'])) {
         $path = Storage::disk('s3')->putFile('/',$form['photo'],'public');
         $coordinate->image_path = Storage::disk('s3')->url($path);
+        $file = $request->file('photo');
+        // 画像の拡張子を取得
+        $extension = $request->file('photo')->getClientOriginalExtension();
+        // 画像の名前を取得
+        $filename = $request->file('photo')->getClientOriginalName();
+        // 画像をリサイズ
+        // $image = \Image::make(file_get_contents($form['photo']->getRealPath()));
+        $resize_img = \Image::make($file)->resize(100, null, function ($constraint) {$constraint->aspectRatio();})->encode($extension);
+        // s3のuploadsファイルに追加
+        $path = Storage::disk('s3')->put('/uploads/'.$filename,(string)$resize_img, 'public');
+        // 画像のURLを参照
+        $coordinate->image_path_100 = Storage::disk('s3')->url('uploads/'.$filename);
+
+
+  // $image->resize(100, null, function ($constraint) {$constraint->aspectRatio();})->save(public_path().'/images/100-'.$form['photo']->hashName());
+//       $path = Storage::disk('s3')->putFile('/',  $image->resize(100, null, function ($constraint) {$constraint->aspectRatio();})
+// ,'public');
+//       $coordinate->image_path = Storage::disk('s3')->url($path);
+
       } else {
         $coordinate->image_path = null;
       }

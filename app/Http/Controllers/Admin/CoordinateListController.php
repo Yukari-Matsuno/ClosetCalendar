@@ -23,11 +23,12 @@ class CoordinateListController extends Controller
 
       } elseif($order_request == "favorite") {
 
-          $coordinates = Coordinate::where('user_id', Auth::id())->orderBy('rating', 'desc')->simplepaginate(14);
+          $coordinates = Coordinate::where('user_id', Auth::id())->orderBy('rating', 'desc')->orderBy('date', 'desc')->simplepaginate(14);
           // dd($coordinates);
       } else {
           $coordinates = Coordinate::where('user_id', Auth::id())->orderBy('date', 'desc')->simplepaginate(14);
       }
+
       return view('admin.coordinatelist', ['coordinates' => $coordinates]);
 
 
