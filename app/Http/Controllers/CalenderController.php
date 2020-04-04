@@ -22,13 +22,19 @@ class CalenderController extends Controller
       $coordinateDateHash = [];
       foreach ($coordinates as $coordinate) {
         $coordinateDateHash[$coordinate->date]["id"]=$coordinate->id;
-        $coordinateDateHash[$coordinate->date]["events"]=$coordinate->events;
-      }
+        $coordinateDateHash[$coordinate->date]["events"]=$coordinate->events. "\n";// . '<img border="0" src="' . $coordinate->image_path_100 . '" width="128" height="128" alt="イラスト1">';
+        $coordinateDateHash[$coordinate->date]["img"]=$coordinate->image_path_100;
+        // $coordinateDateHash[$coordinate->date]["events"].=
+         // {!! <img src="" > !!};
+
+        }
+
       $events = [];
       foreach($coordinateDateHash as $date=>$item){
         $events[] = [
           'id' => $item['id'],
           'title' => $item['events'],
+          'img' =>$item['img'],
           'start' => $date
         ];
       }
@@ -45,7 +51,7 @@ class CalenderController extends Controller
       ];
 
       $today = Carbon::today()->toDateString();
-      return view('admin.calender', ['coordinateDateHash' => $coordinateDateHash, 'events' => $events, 'today' => $today]);
+      return view('admin.calender', ['coordinateDateHash' => $coordinateDateHash, 'events' => $events, 'today' => $today, 'coordinates' => $coordinates]);
     } else {
 
         $now = Carbon::now();

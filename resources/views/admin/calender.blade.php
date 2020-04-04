@@ -76,8 +76,24 @@ document.addEventListener("DOMContentLoaded", function() {
       location.href = redirectUrl;
     },
 
+    eventRender: function(info) {
 
-     events: _events,
+      if(info.event.extendedProps){
+        console.log(info.event.extendedProps);
+        // $(element['img'])  //imgプロパティが存在するイベントだけtitleを画像に差し替え
+        // .css("border-color", "transparent")
+        // .css("background-color", "transparent")
+        // .html('<img src="'+events.img+'" />');
+        var el = $(info.el).html();
+        $(info.el).html(el+'<img src="'+info.event.extendedProps.img+'" />');
+        // element.html('<img src="'+events.img+'" />');
+      }
+    },
+
+    events: _events,
+
+
+
 
     //イベントのクリック時の処理を加えます
     eventClick: function(info) {
@@ -88,11 +104,14 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         location.href = `/admin/coordinate/detail?id=${info.event['id']}`;
       }
+    },
 
 
 
 
-    }
+
+
+
    });
 
   calendar.render();

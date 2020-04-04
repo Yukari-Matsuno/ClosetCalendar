@@ -103,7 +103,7 @@ class CoordinateController extends Controller
 
       unset($form['_token']);
 
-      // 該当するデータを上書きして保存する
+      //該当するデータを上書きして保存する
       $form["tops"] == null ? "" : $coordinate->tops = $form["tops"];
       $form["bottoms"] == null ? "" : $coordinate->bottoms = $form["bottoms"];
       $form["outer"] == null ? "" : $coordinate->outer = $form["outer"];
@@ -112,6 +112,7 @@ class CoordinateController extends Controller
       $coordinate->date = $form["date"];
       $coordinate->rating = $form["rating"];
       $coordinate->save();
+
 
       return redirect('admin/calender');
       }
