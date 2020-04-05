@@ -22,7 +22,7 @@ class CalenderController extends Controller
       $coordinateDateHash = [];
       foreach ($coordinates as $coordinate) {
         $coordinateDateHash[$coordinate->date]["id"]=$coordinate->id;
-        $coordinateDateHash[$coordinate->date]["events"]=$coordinate->events. "\n";// . '<img border="0" src="' . $coordinate->image_path_100 . '" width="128" height="128" alt="イラスト1">';
+        $coordinateDateHash[$coordinate->date]["events"]=$coordinate->events. "\n";
         $coordinateDateHash[$coordinate->date]["img"]=$coordinate->image_path_100;
         // $coordinateDateHash[$coordinate->date]["events"].=
          // {!! <img src="" > !!};

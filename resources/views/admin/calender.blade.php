@@ -77,16 +77,19 @@ document.addEventListener("DOMContentLoaded", function() {
     },
 
     eventRender: function(info) {
-
-      if(info.event.extendedProps){
-        console.log(info.event.extendedProps);
-        // $(element['img'])  //imgプロパティが存在するイベントだけtitleを画像に差し替え
-        // .css("border-color", "transparent")
-        // .css("background-color", "transparent")
-        // .html('<img src="'+events.img+'" />');
-        var el = $(info.el).html();
-        $(info.el).html(el+'<img src="'+info.event.extendedProps.img+'" />');
-        // element.html('<img src="'+events.img+'" />');
+      var windowWidth = $(window).width();
+      var windowSm = 767;
+      if(windowWidth > windowSm){
+        if(info.event.extendedProps){
+          console.log(info.event.extendedProps);
+          // $(element['img'])  //imgプロパティが存在するイベントだけtitleを画像に差し替え
+          // .css("border-color", "transparent")
+          // .css("background-color", "transparent")
+          // .html('<img src="'+events.img+'" />');
+          var el = $(info.el).html();
+          $(info.el).html(el+'<img src="'+info.event.extendedProps.img+'" />');
+          // element.html('<img src="'+events.img+'" />');
+        }
       }
     },
 

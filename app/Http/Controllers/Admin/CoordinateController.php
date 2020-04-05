@@ -43,7 +43,7 @@ class CoordinateController extends Controller
         $filename = $request->file('photo')->getClientOriginalName();
         // 画像をリサイズ
         // $image = \Image::make(file_get_contents($form['photo']->getRealPath()));
-        $resize_img = \Image::make($file)->resize(100, null, function ($constraint) {$constraint->aspectRatio();})->encode($extension);
+        $resize_img = \Image::make($file)->resize(80, null, function ($constraint) {$constraint->aspectRatio();})->crop(80, 80)->encode($extension);
         // s3のuploadsファイルに追加
         $path = Storage::disk('s3')->put('/uploads/'.$filename,(string)$resize_img, 'public');
         // 画像のURLを参照

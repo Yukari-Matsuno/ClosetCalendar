@@ -230,8 +230,9 @@ button a {
 }
 
 .fc-event {
-    background-color: #ff6666;
-    border: #ff6666;
+    background-color: #FFB2B2;
+    border: #FFB2B2;
+    text-align: center;
 }
 
 .fc-content {
