@@ -2,17 +2,17 @@
 # <font color=#ff6666>Closet Calendar</font>
 
 
-## ：earth_asia：　App URL
+## :earth_asia:　App URL
 
 ### (https://closet-calendar.herokuapp.com/)
 
-## ：質問： what is Closet Clalendar?
+## ：question： what is Closet Clalendar?
 *　たくさん服を持っているのに、気づけば同じ服ばかり着ている…
 ＊　デートに前と同じ服で行くのは嫌だけど、そもそも前回何を着ていたか覚えていない…
 そんな悩みを解決するため、毎日のコーディネートを記録出来るアプリです。
 
 
-## ：電球：　Closet Calendarのポイント
+## :bulb:　Closet Calendarのポイント
 
 1. 毎日のコーディネートの記録
 カレンダー形式で一目で確認出来ます。
