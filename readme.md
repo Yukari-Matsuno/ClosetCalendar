@@ -34,7 +34,7 @@
 
 Yukari Matsuno
 * [Github](https://github.com/Yukari-Matsuno/)
-* [Twitter](https://twitter.com/tsunoyukahan/）
+* [Twitter](https://twitter.com/tsunoyukahan）
 
 
 
