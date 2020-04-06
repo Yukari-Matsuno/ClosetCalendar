@@ -6,7 +6,7 @@
 
 ### (https://closet-calendar.herokuapp.com/)
 
-## ：question： what is Closet Clalendar?
+## :question: what is Closet Clalendar?
 *　たくさん服を持っているのに、気づけば同じ服ばかり着ている…
 ＊　デートに前と同じ服で行くのは嫌だけど、そもそも前回何を着ていたか覚えていない…
 そんな悩みを解決するため、毎日のコーディネートを記録出来るアプリです。
@@ -14,10 +14,21 @@
 
 ## :bulb:　Closet Calendarのポイント
 
-1. 毎日のコーディネートの記録
-カレンダー形式で一目で確認出来ます。
+1. 毎日のコーディネートの記録がカレンダー形式で一目で確認出来ます。
 2. 先々の予定も記録できます。着たい服を決めたら、忘れないようにメモしておきましょう。
 3. コーディネートを５段階で評価出来ます。気に入った組み合わせ、評判の良かったコーディネートを一覧で確認出来ます。
+
+## :computer: 開発環境
+
+＊　Laravel　5.8.37
+
+## :woman: Author
+Yukari Matsuno
+* Github(https://github.com/Yukari-Matsuno/)
+* Twitter(https://twitter.com/tsunoyukahan）
+
+
+
 
 
 
