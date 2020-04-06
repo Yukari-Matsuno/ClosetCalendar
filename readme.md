@@ -1,16 +1,17 @@
 ![closetcakendar_image](https://user-images.githubusercontent.com/60007570/78478126-dc5f3380-777f-11ea-9945-fbe6c91f7635.png)
-# <font color=#ff6666>Closet Calendar</font>
+# <span style="color: #ff6666; ">Closet Calendar</span>
 
 
-## :earth_asia:　App URL
+## :earth_asia:　URL
 
 ### (https://closet-calendar.herokuapp.com/)
 
 ## :ribbon: Closet Clalendar　とは ？
-・ たくさん服を持っているのに、気づけば同じ服ばかり着ている…
-・ デートに前と同じ服で行くのは嫌だけど、そもそも前回何を着ていたか覚えていない…
+* たくさん服を持っているのに、気づけば同じ服ばかり着ている…
+* デートに前と同じ服で行くのは嫌だけど、そもそも前回何を着ていたか覚えていない…
 
-  そんな悩みを解決するため、毎日のコーディネートを記録出来るアプリです。
+  **そんな悩みを解決するため、毎日のコーディネートを記録出来るアプリです。**
+
 
 
 ## :bulb:　Closet Calendarのポイント
@@ -28,11 +29,14 @@
 ![coordinatelist_demo](https://user-images.githubusercontent.com/60007570/78555516-2d3a5f00-7848-11ea-8ae8-283e1c88de3b.png)
 
 
+
 ## :computer: 開発環境
 
-*　Laravel　5.8.37
+* Laravel　5.8.37
+
 
 ## :woman: Author
+
 Yukari Matsuno
 * [Github](https://github.com/Yukari-Matsuno/)
 * [Twitter](https://twitter.com/tsunoyukahan）
