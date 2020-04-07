@@ -11,42 +11,39 @@
 </head>
 
 <body id="how-to">
-  <main class="how-to__contents">
-    <h1>HOW to USE</h1>
+  <main class="how-to__contents clearfix">
+    <h1>What is Closet Caledar?</h1>
     <div class="how-to__probrem clearfix">
       <ul class="how-to__probrem--text">
-        <li>あの人に会うのに、前もこの服だった気がする…</li>
-        <li>気づいたら、同じ組み合わせばかり…</li>
-        <li>出番が回ってこない服がある…</li>
+        <li>たくさん服を持っているのに、気づけば同じ服ばかり着ている…</li>
+        <li>デートに前と同じ服で行くのは嫌だけど、そもそも前回何を着ていたか覚えていない!</li>
+        <li>今度この組み合わせを試してみよう！と思いついても、当日になると忘れている</li>
       </ul>
       <img src="images/boy.png" alt="コーディネートに悩む人" class="how-to__probrem--image">
-
     </div>
-
-    <div class="how-to__main">
-      <div class="how-to__main--describe clearfix">
-        <p class="num num1">①</p>
-        <div class="how-to__main--describe--article how-to__main--describe--article--1 clearfix">
-          <img src="images/takephoto.png" alt="自撮りをする女性">
-          <p>毎日のコーデを記録して、手持ちのアイテムを満遍なく活用しましょう！</p>
-        </div>
-      </div>
-      <div class="how-to__main--describe clearfix">
-        <p class="num num2">②</p>
-        <div class="how-to__main--describe--article how-to__main--describe--article--2 clearfix">
-          <img src="images/setup.png" alt="コーディネート">
-          <p>「あの日はこれ着よう！」<br>　「これとこれ、合うかも？」<br>　　も、思いついたらメモ♪</p>
-        </div>
-      </div>
+    <div class="how-to__calendar">
+      <h2 class="how-to__calendar__text">Closet Calendarで毎日のコーディネートを記録して、これらを解決しましょう！</h2>
+      <img src="images/calendar_demo.png" alt="ClosetCalendarのイメージ画像" class="how-to__calendar--image">
     </div>
-
-    <div class="how-to__contents--message clearfix">
-      <div class="how-to__contents--message--text">
-        <p>PUT on DIFFERENT!</p>
-        <p>PUT on ALL!</p>
-      </div>
-      <button class="button" type="button" class="how-to__contents--message--button"><a href={{ url('calender') }}>←</a></button>
+    <div class="how-to__point clearfix">
+      <h3 class="how-to__point--text">Point of Closet Calendar</h3>
+    <div class="how-to__card">
+      <img src="images/demo_create.png" alt="コーディネート投稿画面のイメージ" class="how-to__card--image">
+      <p class="how-to__card--p">今日のコーディネートも、「あの日はこれ着よう！」の予定も記録できます！</p>
     </div>
+    <div class="how-to__card">
+      <img src="images/takephoto.png" alt="自撮りする女性" class="how-to__card--image">
+      <p class="how-to__card--p">Closet Calendarを誰かに見られることはありません。「映える」写真を取らなくても大丈夫。気軽にメモしましょう。</p>
+    </div>
+    <div class="how-to__card">
+      <img src="images/coordinatelist_demo.png" alt="自撮りする女性" class="how-to__card--image">
+      <p class="how-to__card--p">コーディネートは５段階で評価出来ます。気に入った組み合わせ、評判の良かった着こなしを一覧で確認出来ます。</p>
+    </div>
+  </div>
+
+  <div class="how-to__button">
+    <button class="button" type="button"><a href={{ url('calender') }}>←</a></button>
+  </div>
   </main>
 </body>
 

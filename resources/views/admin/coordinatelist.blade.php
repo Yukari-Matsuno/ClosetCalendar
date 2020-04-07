@@ -8,7 +8,7 @@
 
   <form id="coordinatelist__order" action="{{ action('Admin\CoordinateListController@index') }}" method="get">
   <select name="coordinatelist__order">
-    <option value="">並び替える</option>
+    <option value=""></option>
     <option value="date">日付順</option>
     <option value="favorite">お気に入り順</option>
   </select>

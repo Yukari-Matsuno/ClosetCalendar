@@ -94,7 +94,18 @@ class CoordinateController extends Controller
       $form = $request->all();
       if (isset($form['photo'])) {
         $path = Storage::disk('s3')->putFile('/',$form['photo'],'public');
-        $coordinate->image_path = Storage::disk('s3')->url($path);;
+        $coordinate->image_path = Storage::disk('s3')->url($path);
+        $file = $request->file('photo');
+        // 画像の拡張子を取得
+        $extension = $request->file('photo')->getClientOriginalExtension();
+        // 画像の名前を取得
+        $filename = $request->file('photo')->getClientOriginalName();
+        // 画像をリサイズ
+        $resize_img = \Image::make($file)->resize(80, null, function ($constraint) {$constraint->aspectRatio();})->crop(80, 80)->encode($extension);
+        // s3のuploadsファイルに追加
+        $path = Storage::disk('s3')->put('/uploads/'.$filename,(string)$resize_img, 'public');
+        // 画像のURLを参照
+        $coordinate->image_path_100 = Storage::disk('s3')->url('uploads/'.$filename);
         unset($form['photo']);
       } elseif (isset($request->remove)) {
         $coordinate->image_path = null;

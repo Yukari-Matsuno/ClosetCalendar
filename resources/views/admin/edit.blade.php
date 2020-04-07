@@ -23,7 +23,7 @@
       <dd><input type="text" name="events" value="{{ $coordinate_items->events }}"></dd>
       <dt class="photo">Photo</dt>
       <dd><input type="file" name="photo" class="photoupload"></dd>
-        <div>
+        <div class="setting-photo">
         設定中: {{ $coordinate_items->image_path }}
         </div>
 
