@@ -79,15 +79,15 @@ document.addEventListener("DOMContentLoaded", function() {
   //
   // ],
 
-    events: [
-
-    {
-      title: 'How to use?',
-      start: start
-    }
-
-
-  ],
+  //   events: [
+  //
+  //   {
+  //     title: 'How to use?',
+  //     start: start
+  //   }
+  //
+  //
+  // ],
 
 
     //イベントのクリック時の処理を加えます
@@ -102,15 +102,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 @section('content')
-<main id=closet-caleder>
-<h1 class="calender__message-for-guest">Welcome !<br><a href="{{ route('login') }}">Login</a> & Make Your Closet Clalendar</h1>
-<div class="calender__container calender__container--for-guest">
-  <!-- <div class="calender__image-for-guest">
-    <img src="images/select.jpg" alt="服を選ぶ女性" >
-  </div> -->
-
-  <div id ="calendar" class="calender__for-guest"></div>
-
+<main id="closet-caleder">
+  <div class="calender__container calender__container--for-guest">
+    <div class="calender__message-for-guest">
+      <h1>Welcome to Closet Calendar !</h1>
+      <p><a href ="{{ url('how-to') }}">What is?</a></p>
+      <p><a href ="{{ route('login') }}">Login & Make your Closet Calendar</a></p>
+    </div>
+    <div id ="calendar" class="calender__for-guest"></div>
 </div>
 </main>
 

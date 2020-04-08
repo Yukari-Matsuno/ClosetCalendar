@@ -306,45 +306,54 @@ button a {
 /* ログインしてない時のカレンダー */
 .calender__container--for-guest {
     position: relative;
+
 }
 
 .calender__for-guest {
-    opacity: 0.4;
+
 }
 
-.calender__image-for-guest {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
-}
 
 .calender__message-for-guest {
+    position: absolute;
+    height: 100%;
+    width:100%;
+    z-index: 20;
     color: #ff6666;
-    background-color: #f0f8ff;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
-    border-radius: 10px;
     font-size: 30px;
-    text-align: center;
+    padding: 10% 5%;
+
+}
+
+.calender__message-for-guest p {
+  background-color: #ff6666;
+  margin-left: 8%;
+  padding: 8px;
+  border-radius: 5px;
+  width: 30%;
+  text-align: center;
+  float:left;
+  display: inline-block;
+
 }
 
 .calender__message-for-guest a {
     text-decoration: none;
-    color: Red;
+    color: white;
+
+
 }
 
 .fc-bgevent-skeleton td:first-child {
-    background-color: #ff6666;
-    opacity: 0.1;
+    background-color: #ffe6e6;
+
 }
 
 .fc-bgevent-skeleton td:last-child {
-    background-color: #ff6666;
-    opacity: 0.1;
+    background-color: #ffe6e6;
+
 }
 
 /* 作成、編集画面 */
@@ -706,7 +715,7 @@ input {
 
     .how-to__calendar__text {
       width: 100%;
-      font-size: 1em;
+      font-size: 6vw;
     }
 
     .how-to__point {
@@ -716,7 +725,7 @@ input {
     }
 
     .how-to__point--text {
-      font-size: 6vw;
+      font-size: 8vw;
     }
 
     .how-to__card {
