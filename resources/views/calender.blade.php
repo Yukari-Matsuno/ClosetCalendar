@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <main id="closet-caleder">
   <div class="calender__container calender__container--for-guest">
     <div class="calender__message-for-guest">
-      <h1>Welcome to Closet Calendar !</h1>
+      <h1>Welcome to<br>Closet Calendar !</h1>
       <p><a href ="{{ url('how-to') }}">What is?</a></p>
       <p><a href ="{{ route('login') }}">Login & Make your Closet Calendar</a></p>
     </div>

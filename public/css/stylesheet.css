@@ -323,7 +323,7 @@ button a {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
     font-size: 30px;
-    padding: 10% 5%;
+    padding: 16% 5%;
 
 }
 
@@ -348,12 +348,10 @@ button a {
 
 .fc-bgevent-skeleton td:first-child {
     background-color: #ffe6e6;
-
 }
 
 .fc-bgevent-skeleton td:last-child {
     background-color: #ffe6e6;
-
 }
 
 /* 作成、編集画面 */
@@ -767,6 +765,18 @@ input {
     .fc-event {
         word-break: break-all;
         font-size: 0.6em;
+    }
+
+    .calender__message-for-guest p {
+      float: none;
+      margin: 14px 25%;
+      padding: 8px;
+      border-radius: 5px;
+      width: 50%;
+      text-align: center;
+      float:left;
+
+
     }
 
     /* 投稿・編集 */
