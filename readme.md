@@ -23,13 +23,12 @@
 
 
 **2. 先々の予定も記録できます。着たい服を決めたら、忘れないようにメモしておきましょう。**  
-
-![create_demo](https://user-images.githubusercontent.com/60007570/78555151-60302300-7847-11ea-91b5-1778871f8d2e.png)    
-
+    
+<img src="https://user-images.githubusercontent.com/60007570/78555151-60302300-7847-11ea-91b5-1778871f8d2e.png" width="500px">
 
 **3. コーディネートを５段階で評価出来ます。気に入った組み合わせ、評判の良かったコーディネートを一覧で確認出来ます。**  
 
-![coordinatelist_demo](https://user-images.githubusercontent.com/60007570/78555516-2d3a5f00-7848-11ea-8ae8-283e1c88de3b.png)  　　
+ <img src="https://user-images.githubusercontent.com/60007570/78555516-2d3a5f00-7848-11ea-8ae8-283e1c88de3b.png" width="500px">　　
 
 ## :computer: 開発環境 
 
