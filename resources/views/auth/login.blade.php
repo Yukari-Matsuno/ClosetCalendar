@@ -63,6 +63,11 @@
                                     </a>
                                 @endif
                             </div>
+
+                            <div class="col-md-8 offset-md-4" style="margin-top: 10px;">
+                              <a href="{{ route('register')}}" class="btn btn-primary">新規登録はこちら</a>
+                            </div>
+
                         </div>
                     </form>
                 </div>
