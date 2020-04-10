@@ -2,7 +2,7 @@
 ![closetcakendar_image](https://user-images.githubusercontent.com/60007570/78478126-dc5f3380-777f-11ea-9945-fbe6c91f7635.png)
    
 
-## :ribbon: Closet Clalendar　とは ？
+## :ribbon: Closet Clalendar とは ？
 
 * たくさん服を持っているのに、気づけば同じ服ばかり着ている…
 * デートに前と同じ服で行くのは嫌だけど、そもそも前回何を着ていたか覚えていない… 
@@ -10,7 +10,7 @@
   **そんな悩みを解決するため、毎日のコーディネートを記録出来るアプリです。** 
   
 
-## :bulb:　Closet Calendarのポイント    
+## :bulb:　Closet Calendar のポイント    
 
 **1. 毎日のコーディネートの記録がカレンダー形式で一目で確認出来ます。**  
 
