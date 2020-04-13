@@ -193,8 +193,8 @@ button a {
 }
 
 .how-to__button {
-    float: right;
-    margin: 0 4% 50px 0;
+
+    margin: 50px 0px 50px 4%;
 }
 
 /* .how-to__card--p {
@@ -318,7 +318,7 @@ button a {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
     font-size: 30px;
-    padding: 16% 5%;
+    padding: 16% 5% 0;
 
 }
 
@@ -629,6 +629,138 @@ input {
     color: white;
     font-size: 1.5em;
     font-family: 'ヒラギノ丸ゴ ProN', 'Hiragino Maru Gothic ProN', sans-serif;
+}
+
+/* 利用規約 */
+.link-to-terms {
+  margin-top: 50px;
+}
+
+.link-to-terms ul {
+  width: 30%;
+  margin:0 10% 0 60%;
+}
+
+.link-to-terms li {
+  list-style: none;
+  float: left;
+  margin-left: 20px;
+
+}
+
+.link-to-terms  a {
+  text-decoration: none;
+  color: dimgray;
+}
+.terms_privacy-policy {
+  background-color: #ffc6c6;
+  color: #333333;
+}
+
+#terms, #privacy-policy {
+  width: 60%;
+  background-color: white;
+  border-radius: 5px;
+  margin: 3% auto;
+  padding: 6%;
+}
+
+#terms h1, #privacy-policy h1 {
+  margin-bottom: 50px;
+}
+
+#terms span {
+  color: #ff6666;
+}
+
+#terms p, #privacy-policy p {
+  margin-bottom: 16px;
+}
+
+.article, #privacy-policy ol {
+  margin-bottom: 35px;
+}
+
+.article ol li, #privacy-policy ol li {
+  margin-bottom: 10px;
+}
+.article ul  {
+  margin-top: 12px;
+}
+#privacy-policy ul {
+  margin-bottom: 35px;
+}
+
+.article ul li, #privacy-policy ul li{
+  list-style: disc;
+}
+
+.privacy-policy-articleli {
+  list-style-type: upper-roman;
+}
+
+
+
+
+/* フッター */
+footer {
+  background-color: #ffc6c6;
+  margin: 14% 0 50px;
+
+}
+
+.footernav  {
+  width: 30%;
+  margin: auto;
+}
+.footernav li {
+  float: left;
+  list-style: none;
+  text-align: center;
+  padding: 15px 30px;
+  font-size: small;
+}
+
+.footernav li a {
+  text-decoration: none;
+  color: gray;
+}
+.footernav__change-info{
+  margin-top: 6px;
+}
+
+.footer-for-user{
+  margin: 10px 0 50px 0;
+}
+
+/* アカウント情報変更 */
+.edit-acount-infomaition__list--title {
+  font-size: 1.5em;
+  margin: 30px 0;
+}
+
+.edit-acount-infomaition__list {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.edit-acount-infomaition__list li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.caution {
+  color: red;
+  margin: 10px 0 20px 10px;
+}
+
+#destroy {
+  background: red;
+  border: red;
+}
+
+.form-control-input {
+  margin-bottom: 16px;
 }
 
 /* レスポンシブ対応 */
@@ -997,4 +1129,59 @@ input {
     .birthday__message {
         font-size: 0.8em;
     }
+    /* フッター */
+
+
+    .footernav  {
+      width: 70%;
+      margin: 0 auto;
+      padding: 16px 0 0;
+    }
+
+
+    .footernav li {
+      float: none;
+      list-style: none;
+      text-align: center;
+      padding:0 0 16px 0;
+    }
+
+    .footernav li a {
+      text-decoration: none;
+      color: gray;
+    }
+    .footernav__change-info{
+      margin-top: 6px;
+    }
+
+    /* 利用規約 */
+    #terms, #privacy-policy {
+      width: 92%;
+      border-radius: 0px;
+      margin: 10% 0;
+      padding: 4%;
+      font-size: 0.8em;
+    }
+
+    .link-to-terms ul {
+      width: 70%;
+      margin:0 2% 18px 28%;
+      padding: 0;
+    }
+    .link-to-terms ul li{
+      float: none;
+      text-align: right;
+      font-size: 0.8em;
+      margin-bottom: 10px;
+    }
+
+    #terms h1, #privacy-policy h1 {
+      font-size: 6vw;
+      margin-bottom: 20px;
+    }
+
+    #terms ol, #terms ul,  #privacy-policy ol, #privacy-policy ul {
+      padding-left: 20px;
+    }
+
 }

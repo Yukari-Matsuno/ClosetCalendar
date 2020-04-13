@@ -104,14 +104,18 @@ document.addEventListener("DOMContentLoaded", function() {
 @section('content')
 <main id="closet-caleder">
   <div class="calender__container calender__container--for-guest">
-    <div class="calender__message-for-guest">
+    <div class="calender__message-for-guest clearfix">
       <h1>Welcome to<br>Closet Calendar !</h1>
       <p><a href ="{{ url('how-to') }}">What is?</a></p>
       <p><a href ="{{ route('login') }}">Login & Make your Closet Calendar</a></p>
     </div>
     <div id ="calendar" class="calender__for-guest"></div>
-</div>
+  </div>
 </main>
-
-
+<footer>
+  <ul class="clearfix footernav">
+    <li><a href="{{ url('terms') }}">利用規約<br>プライバシーポリシー</a></li>
+    <li class="footernav__change-info"><a href="{{ url('admin/change') }}" >アカウント情報の変更</a></li>
+  </ul>
+</footer>
 @endsection

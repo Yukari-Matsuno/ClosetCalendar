@@ -17,6 +17,7 @@ Route::get('/home', 'CalenderController@index');
 Route::get('calender', 'CalenderController@index');
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('terms', 'TermsController@show');
 // Route::get('create/sample', 'Admin\CoordinateController@add');
 
 Route::group(['prefix' => 'admin'], function(){
@@ -29,4 +30,10 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('coordinate/delete', 'Admin\CoordinateController@destroy')->middleware('auth');
     Route::get('happybirthday', 'Admin\BirthdayController@show')->middleware('auth');
     Route::get('Coordinate/list','Admin\CoordinateListController@index')->middleware('auth');
+    Route::get('change','Admin\EditUserInfoClontroller@show')->middleware('auth');
+    Route::post('changepassword', 'Admin\EditUserInfoClontroller@editPassword')->name('editpassword');
+    Route::post('changeemail', 'Admin\EditUserInfoClontroller@editEmail')->name('editemail');
+    Route::post('changename', 'Admin\EditUserInfoClontroller@editName')->name('editname');
+    Route::post('changebirthday', 'Admin\EditUserInfoClontroller@editBirthday')->name('editbirthday');
+    Route::get('delete', 'Admin\EditUserInfoClontroller@destroy')->name('delete');
  });

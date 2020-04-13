@@ -109,12 +109,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     },
 
-
-
-
-
-
-
    });
 
   calendar.render();
@@ -135,9 +129,12 @@ document.addEventListener("DOMContentLoaded", function() {
 <button class="button calendar__addtoday"><a href="{{ url('admin/coordinate/create?date=') . $today }}"><i class="fas fa-pen fa-2x"></i></a></button>
 <button class="button square-button calendar__showlist"><a href="{{ action('Admin\CoordinateListController@index') }}">コーディネートを一覧で見る</a></button>
 
-
 </main>
 
-
-
+<footer class="footer-for-user">
+  <ul class="clearfix footernav">
+    <li><a href="{{ url('terms') }}">利用規約<br>プライバシーポリシー</a></li>
+    <li class="footernav__change-info"><a href="{{ url('admin/change') }}" >アカウント情報の変更</a></li>
+  </ul>
+</footer>
 @endsection
