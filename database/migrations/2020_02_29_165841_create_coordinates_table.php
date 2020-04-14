@@ -16,12 +16,12 @@ class CreateCoordinatesTable extends Migration
         Schema::create('coordinates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
-            $table->string('tops')->default('No Item');
-            $table->string('bottoms')->default('No Item');
-            $table->string('outer')->default('No Item');
-            $table->string('shoes')->default('No Item');
-            $table->string('other')->default('No Item');
-            $table->string('events')->default('Nothing much...');
+            $table->string('tops')->nullable();
+            $table->string('bottoms')->nullable();
+            $table->string('outer')->nullable();
+            $table->string('shoes')->nullable();
+            $table->string('other')->nullable();
+            $table->string('events')->nullable();
             $table->string('image_path')->nullable();
             $table->string('image_path_100')->nullable();
             $table->string('date');

@@ -21,7 +21,11 @@
     @foreach ($coordinates as $coordinate)
     <li>
       <div class="clearfix coordinatelist__li">
+        @if ($coordinate->evets)
         <p class="coordinatelist__li--date"><a href="{{ url('admin/coordinate/detail?id=') . $coordinate->id }}">{{substr($coordinate->date, 5, 2) . "/" . substr($coordinate->date, 8, 2) . "　" . $coordinate->events}}</a></p>
+        @else
+        <p class="coordinatelist__li--date"><a href="{{ url('admin/coordinate/detail?id=') . $coordinate->id }}">{{substr($coordinate->date, 5, 2) . "/" . substr($coordinate->date, 8, 2) . "　" . "Nothing much..."}}</a></p>
+        @endif
         @if ($coordinate->image_path)
         <img src="{{ $coordinate->image_path }}" class="coordinatelist__li--photo">
         @else
@@ -33,7 +37,7 @@
           <ul>
             <?php $items = [$coordinate->tops, $coordinate->bottoms, $coordinate->outer, $coordinate->shoes, $coordinate->other]; ?>
             @foreach ($items as $item)
-              @if ($item != "No Item")
+              @if ($item)
               <li>{{ $item }}</li>
               @endif
             @endforeach

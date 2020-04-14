@@ -63,11 +63,11 @@ class CoordinateController extends Controller
       unset($form['_token']);
       // フォームから送信されてきたimageを削除する
       unset($form['photo']);
-      $form["tops"] == null ? "" : $coordinate->tops = $form["tops"];
-      $form["bottoms"] == null ? "" : $coordinate->bottoms = $form["bottoms"];
-      $form["outer"] == null ? "" : $coordinate->outer = $form["outer"];
-      $form["shoes"] == null ? "" : $coordinate->shoes = $form["shoes"];
-      $form["events"] == null ? "" : $coordinate->events = $form["events"];
+      $coordinate->tops = $form["tops"];
+      $coordinate->bottoms = $form["bottoms"];
+      $coordinate->outer = $form["outer"];
+      $coordinate->shoes = $form["shoes"];
+      $coordinate->events = $form["events"];
       $coordinate->date = $form["date"];
       $coordinate->user_id = $form["user_id"];
       $coordinate->rating = $form["rating"];
@@ -109,19 +109,21 @@ class CoordinateController extends Controller
         unset($form['photo']);
       } elseif (isset($request->remove)) {
         $coordinate->image_path = null;
+        $coordinate->image_path_100 = null;
         unset($form['remove']);
       }
 
       unset($form['_token']);
 
       //該当するデータを上書きして保存する
-      $form["tops"] == null ? "" : $coordinate->tops = $form["tops"];
-      $form["bottoms"] == null ? "" : $coordinate->bottoms = $form["bottoms"];
-      $form["outer"] == null ? "" : $coordinate->outer = $form["outer"];
-      $form["shoes"] == null ? "" : $coordinate->shoes = $form["shoes"];
-      $form["events"] == null ? "" : $coordinate->events = $form["events"];
+      $coordinate->tops = $form["tops"];
+      $coordinate->bottoms = $form["bottoms"];
+      $coordinate->outer = $form["outer"];
+      $coordinate->shoes = $form["shoes"];
+      $coordinate->events = $form["events"];
       $coordinate->date = $form["date"];
       $coordinate->rating = $form["rating"];
+      // dd([$form, $coordinate, $coordinate->save(), $form["events"] == null]);
       $coordinate->save();
 
 

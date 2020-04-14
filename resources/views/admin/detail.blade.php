@@ -23,7 +23,7 @@
     <p class="coordinate__item--title">使用アイテム</p>
     <ul>
       @foreach ($use_items as $use_item)
-      @if ($use_item == "No Item")
+      @if ($use_item == null)
       @continue
       @endif
       <li>{{ $use_item }}</li>
@@ -32,7 +32,11 @@
   </div>
   <div class="coordinate__ivent">
     <p class="coordinate__ivent--title">{{ substr($coordinate_items->date, 5, 2) . "/" . substr($coordinate_items->date, 8, 2) }}の出来事</p>
+    @if($coordinate_items->events)
     <p class="coordinate__ivent--text">{{ $coordinate_items->events }}</p>
+    @else
+    <p class="coordinate__ivent--text">Nothing much...</p>
+    @endif
   </div>
 
 

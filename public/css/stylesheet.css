@@ -734,6 +734,10 @@ footer {
 }
 
 /* アカウント情報変更 */
+.help-block {
+  color: red;
+}
+
 .edit-acount-infomaition__list--title {
   font-size: 1.5em;
   margin: 30px 0;
@@ -754,7 +758,7 @@ footer {
   margin: 10px 0 20px 10px;
 }
 
-#destroy {
+.danger-button {
   background: red;
   border: red;
 }
@@ -1183,5 +1187,25 @@ footer {
     #terms ol, #terms ul,  #privacy-policy ol, #privacy-policy ul {
       padding-left: 20px;
     }
+
+    /* ユーザー情報変更 */
+    .edit-acount-infomaition__list {
+      width: 100%;
+      margin: 0 ;
+    }
+    .edit-acount-infomaition__list--title {
+      text-align: center;
+    }
+
+    .edit-acount-infomaition__list ul{
+      padding: 0;
+    }
+
+    .edit-acount-infomaition__list li {
+      margin-bottom: 0;
+    }
+    .form-group {
+    margin-bottom: 0.4em;
+}
 
 }

@@ -22,7 +22,7 @@ class CalenderController extends Controller
       $coordinateDateHash = [];
       foreach ($coordinates as $coordinate) {
         $coordinateDateHash[$coordinate->date]["id"]=$coordinate->id;
-        $coordinateDateHash[$coordinate->date]["events"]=$coordinate->events. "\n";
+        $coordinateDateHash[$coordinate->date]["events"]=$coordinate->events;
         $coordinateDateHash[$coordinate->date]["img"]=$coordinate->image_path_100;
         // $coordinateDateHash[$coordinate->date]["events"].=
          // {!! <img src="" > !!};
@@ -31,13 +31,35 @@ class CalenderController extends Controller
 
       $events = [];
       foreach($coordinateDateHash as $date=>$item){
-        $events[] = [
-          'id' => $item['id'],
-          'title' => $item['events'],
-          'img' =>$item['img'],
-          'start' => $date
-        ];
+        if ($item['events'] == null && $item['img'] == null) {
+          $events[] = [
+            'id' => $item['id'],
+            'title' => "Nothing much...",
+            'start' => $date
+          ];
+        } elseif ($item['events'] == null) {
+          $events[] = [
+            'id' => $item['id'],
+            'title' => "Nothing much...",
+            'img' =>$item['img'],
+            'start' => $date
+          ];
+        } elseif ($item['img'] == null) {
+          $events[] = [
+            'id' => $item['id'],
+            'title' => $item['events'],
+            'start' => $date
+          ];
+        } else {
+          $events[] = [
+            'id' => $item['id'],
+            'title' => $item['events'],
+            'img' =>$item['img'],
+            'start' => $date
+          ];
+        }
       }
+      
       $user = Auth::user();
 
       $this_year = Carbon::now()->year;

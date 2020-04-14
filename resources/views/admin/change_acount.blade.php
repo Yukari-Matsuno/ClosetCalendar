@@ -30,7 +30,7 @@
         @if (session('edit_password_success'))
           <div class="container mt-2">
             <div class="alert alert-success">
-              {{session('change_password_success')}}
+              {{session('edit_password_success')}}
             </div>
           </div>
         @endif
@@ -88,7 +88,7 @@
         @if (session('edit_email_success'))
           <div class="container mt-2">
             <div class="alert alert-success">
-              {{session('change_email_success')}}
+              {{session('edit_email_success')}}
             </div>
           </div>
         @endif
@@ -134,6 +134,13 @@
 
         <li>
           <p class="card-header">名前(ニックネーム)を変更する</p>
+          @if (session('edit_name_success'))
+            <div class="container mt-2">
+              <div class="alert alert-success">
+                {{session('edit_name_success')}}
+              </div>
+            </div>
+          @endif
           <div class="card-body">
             <form method="POST" action="{{route('editname')}}" class="form-group">
               <input class="form-control form-control-input" type="text" name="new_name"  required>
@@ -144,6 +151,13 @@
         </li>
         <li>
           <p class="card-header">誕生日を変更する</p>
+          @if (session('edit_birthday_success'))
+            <div class="container mt-2">
+              <div class="alert alert-success">
+                {{session('edit_birthday_success')}}
+              </div>
+            </div>
+          @endif
           <div class="card-body">
             <form method="POST" action="{{route('editbirthday')}}" class="form-group">
               <input class="form-control form-control-input" type="date" name="new_birthday"  required>
@@ -157,7 +171,7 @@
           <div class="card-body">
             <p class="caution">※今後このメールアドレス、パスワードではログインできなくなります。<br>また、登録したコーディネートが全て削除されます。</p>
             <!-- <button  class="btn btn-primary" id="destroy">削除する</button> -->
-            <button  class="btn btn-primary" onclick="confirm_destroy();">削除する</button>
+            <button  class="btn btn-primary danger-button" onclick="confirm_destroy();">削除する</button>
           </div>
 
         </li>
