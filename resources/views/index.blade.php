@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/css/stylesheet.css">
 <link rel="stylesheet" href="/css/normalize.css">
+<script data-ad-client="ca-pub-6414942686817258" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <title>Closet Calendar</title>
 </head>
 

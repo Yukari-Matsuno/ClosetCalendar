@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="/css/stylesheet.css">
   <link rel="stylesheet" href="/css/normalize.css">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><!-- Scripts（Jquery） -->
-  <script data-ad-client="ca-pub-6414942686817258" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
 
   <title>@yield('title')</title>
 
