@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'TopController@show');
+// Route::get('/', 'TopController@show');
+Route::get('/', 'CalenderController@index');
 Route::get('how-to', 'HelpController@show');
 Route::get('/home', 'CalenderController@index');
 Route::get('calender', 'CalenderController@index');
