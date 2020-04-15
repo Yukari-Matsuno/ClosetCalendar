@@ -597,7 +597,7 @@ input {
 }
 
 .coordinatelist__button {
-    margin: 0 10% 60px 75%;
+    margin: 10px 75% 60px 10%;
 }
 
 /* 誕生日ページ */
@@ -766,6 +766,13 @@ footer {
 .form-control-input {
   margin-bottom: 16px;
 }
+
+/* 広告 */
+.cm {
+  display: block;
+  margin: 20px auto;
+}
+
 
 /* レスポンシブ対応 */
 @media screen and (max-width:767px) {

@@ -2,12 +2,12 @@
 
 @section('title', 'Closet Calender')
 
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
-
 <script>
 
 //本日、カレンダーの開始日、終了日と、曜日のテキストを用意します
@@ -131,6 +131,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </main>
 
+<div class="cm">
+<a href="https://px.a8.net/svt/ejp?a8mat=3BBLMD+CCQTO2+50+2HJDO1" rel="nofollow">
+<img class="cm" border="0" width="234" height="60" alt="" src="https://www26.a8.net/svt/bgt?aid=200415541747&wid=001&eno=01&mid=s00000000018015039000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3BBLMD+CCQTO2+50+2HJDO1" alt="">
+</div>
 <footer class="footer-for-user">
   <ul class="clearfix footernav">
     <li><a href="{{ url('terms') }}">利用規約<br>プライバシーポリシー</a></li>

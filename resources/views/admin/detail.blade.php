@@ -55,6 +55,11 @@
     </script>
   </div>
 </main>
-<script src="/js/app.js"></script>
+<div>
+<a href="https://rpx.a8.net/svt/ejp?a8mat=3BBLMD+CC5E2A+2HOM+6TMLD&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0eac8dc2.9a477d4e.0eac8dc3.0aa56a48%2Fa20041592984_3BBLMD_CC5E2A_2HOM_6TMLD%3Fpc%3Dhttp%253A%252F%252Fbooks.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fbooks.rakuten.co.jp%252F" rel="nofollow">
+<img class="cm" src="http://hbb.afl.rakuten.co.jp/hsb/0eb46e44.85d79ba9.0eb46e39.39a610d9/" border="0"></a>
+<img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=3BBLMD+CC5E2A+2HOM+6TMLD" alt="">
+</div>
 
+<script src="/js/app.js"></script>
 @endsection
