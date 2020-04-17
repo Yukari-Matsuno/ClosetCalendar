@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var el = $(info.el).html();
           $(info.el).html(el+'<img src="'+info.event.extendedProps.img+'" />');
           // element.html('<img src="'+events.img+'" />');
-        } 
+        }
 
       }
     },
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <footer class="footer-for-user">
   <ul class="clearfix footernav">
     <li><a href="{{ url('terms') }}">利用規約<br>プライバシーポリシー</a></li>
-    <li class="footernav__change-info"><a href="{{ url('admin/change') }}" >アカウント情報の変更</a></li>
+    <!-- <li class="footernav__change-info"><a href="{{ url('admin/change') }}" >アカウント情報の変更</a></li> -->
   </ul>
 </footer>
 @endsection
