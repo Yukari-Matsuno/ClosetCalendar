@@ -82,7 +82,7 @@ button a {
   font-size: 1.4vw;
   width: 75%;
   height: 26px;
-  padding: 0 10%;
+  padding: 0 ;
 
 }
 .navbar-menu {
@@ -1019,6 +1019,7 @@ footer {
 
     #navbar-menu{
       font-size: 20px;
+      
     }
     /* .navbar-menu__cange{
       font-size: 2vw;
