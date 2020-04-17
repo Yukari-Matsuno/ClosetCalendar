@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var windowWidth = $(window).width();
       var windowSm = 767;
       if(windowWidth > windowSm){
-        if(info.event.extendedProps){
+        if(info.event.extendedProps.img){
           console.log(info.event.extendedProps);
           // $(element['img'])  //imgプロパティが存在するイベントだけtitleを画像に差し替え
           // .css("border-color", "transparent")
@@ -89,7 +89,8 @@ document.addEventListener("DOMContentLoaded", function() {
           var el = $(info.el).html();
           $(info.el).html(el+'<img src="'+info.event.extendedProps.img+'" />');
           // element.html('<img src="'+events.img+'" />');
-        }
+        } 
+
       }
     },
 

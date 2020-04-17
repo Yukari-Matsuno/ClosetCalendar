@@ -66,13 +66,30 @@ button a {
     border-radius: 5px;
     margin: 12px 4vw 12px 0;
     width: auto;
-    height: auto;
+    height: 26px;
+    line-height: 26px;
 }
 
 .headernav li a {
     text-decoration: none;
     color: white;
 }
+
+#navbar-menu {
+  border: none;
+  color: white;
+  background-color: #ff6666;
+  font-size: 1.4vw;
+  width: 75%;
+  height: 26px;
+  padding: 0 10%;
+
+}
+.navbar-menu {
+  padding:1% 0 !important;
+}
+
+
 
 /* how to */
 #how-to {
@@ -994,10 +1011,18 @@ footer {
         width: 76%;
     }
 
+/* ヘッダー */
     .headernav li {
         border: white 1px solid;
-        font-size: 5vw;
+        font-size: 20px;
     }
+
+    #navbar-menu{
+      font-size: 20px;
+    }
+    /* .navbar-menu__cange{
+      font-size: 2vw;
+    } */
 
     /* コーディネート詳細 */
     #detail {

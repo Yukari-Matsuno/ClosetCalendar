@@ -29,11 +29,22 @@
   <header>
     <nav class="headernav">
       <ul class="clearfix">
-        @guest
+        <!-- @guest
           <li><a href="{{ route('login') }}">Login</a></li>
         @else
-            <li><a href="{{ route('logout') }}">Logout</a></li>
-        @endguest
+            <li><a href="{{ route('logout') }}">Logout</a></li> -->
+        <!-- @endguest -->
+          <li class="navbar-menu">
+            <select id="navbar-menu">
+              <option value="">Menu</option>
+              @guest
+              <option value="{{ route('login') }}">Login</option>
+              @else
+              <option value="{{ route('logout') }}">Logout</option>
+              @endguest
+              <option class="navbar-menu__cange" value="{{ action('Admin\EditUserInfoClontroller@show') }}">情報の変更</option>
+            </select>
+          </li>
           <li><a href="{{ url('how-to')}}">What is ?</a></li>
         </ul>
       </nav>
@@ -45,3 +56,10 @@
 
 </body>
 </html>
+<script>
+$('#navbar-menu').change(function() {
+      window.location.href = $(this).val();
+});
+
+</script>
+<script src="/js/app.js"></script>
